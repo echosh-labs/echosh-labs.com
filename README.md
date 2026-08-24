@@ -1,152 +1,93 @@
-# Mercury Dash (Amra Core & Foundations Platform)
+# 🌐 Echo SH Labs: Architect's Dossier (`echosh-labs.com`)
 
 > **Organization:** [Echo SH Labs](https://echosh-labs.com) (`echosh-labs.com`)  
-> **Author & Architect:** Justin Andrew Wood  
-> **Core Engine:** Axis Mundi (Zero-Token Google Workspace / Keep Ingestion & MCP Daemon)  
-> **Value Mechanics:** Amra Core (The Architecture of Giving)  
-> **Tech Stack:** Go 1.22 (`bbolt`, `pgx`, `chi`), Next.js 14 (App Router), Web Audio 2.0 DSP, Server-Sent Events (SSE)
-
-A unified esoteric, philosophical, and autonomous operational platform operated by **Echo SH Labs**. Mercury Dash integrates the Foundations consciousness storyboard, real-time procedural DSP acoustics, and the **Axis Mundi** zero-token autonomous operational engine.
+> **Architect & Founder:** Justin Andrew Wood  
+> **Platform Type:** Standalone Next.js 14 Static Export (`output: 'export'`)  
+> **Design Paradigm:** Mercury Dash Architecture & "Five Projects, Five Flavors"  
+> **Production Hosting:** Google Cloud Storage (`gs://echosh-labs.com`)  
 
 ---
 
-## 🏛️ System Layers & Organization
+## 🏛️ Executive Summary
 
-```mermaid
-graph TD
-    Organization["Echo SH Labs (echosh-labs.com)<br/>Front-End Business & Organization"] --> Platform["Mercury Dash Platform<br/>Unified Presentation & Application Shell"]
-    Platform --> Foundations["Foundations Layer (/foundations)<br/>Storyboard Architecture: Intuition • Idealism • Illumination"]
-    Platform --> Synesthetic["Synesthetic Studio<br/>Web Audio 2.0 DSP Acoustic Laboratory"]
-    Platform --> Terminal["Axis Mundi Terminal (/terminal)<br/>Interactive TUI Command Center"]
-    
-    Foundations --> AxisEngine["Axis Mundi Core Engine<br/>Zero-Token Passive Daemon (AUTO / MANUAL)"]
-    AxisEngine --> Workspace["Google Workspace API Bridge<br/>Domain-Wide Delegation (Keep, Docs, Sheets, Drive)"]
-    AxisEngine --> MCPServer["MCP Server (/api/mcp)<br/>Model Context Protocol JSON-RPC 2.0"]
-    AxisEngine --> SSEHub["SSE Telemetry Stream (/api/stream/events)<br/>1-Second Dynamic Countdown Ticker & Gatekeeper Alerts"]
-    
-    Platform --> AmraCore["Amra Core<br/>The Mechanics of Giving & Value Exchange"]
-    Platform --> BoltDB["BoltDB Context Records<br/>Dynamic Knowledge Graph & Ephemeris Store"]
+`echosh-labs.com` is the central static web portal and interactive engineering dossier for **Echo SH Labs**. It showcases the complete spectrum of systems engineering, zero-token infrastructure, and generative audio projects architected by Justin Andrew Wood over the past couple of years.
+
+The site is built with a decoupled, purely static Next.js 14 architecture with zero runtime backend dependencies, integrating low-level Web Audio 2.0 DSP synthesis and client-side simulation sandboxes.
+
+---
+
+## 🎭 "Five Projects, Five Flavors" Route Matrix
+
+Each route in the dossier embodies the authentic visual identity, typography, color palette, and interactive sandbox of its respective project:
+
+```
+================================================================================
+                    ECHO SH LABS // THE 6 DOSSIER ROUTES
+================================================================================
+ 01. /                   -> Mercury Dash Void & Web Audio DSP Synthesizer
+ 02. /martial-arts.html  -> Bold Crimson & Gold Dojo (武道), 5-Discipline Sandbox
+ 03. /axis-mundi.html    -> Cybernetic Violet & Emerald TUI, MCP Tool Registry
+ 04. /foundations.html   -> Alchemical Watercolor Gallery & Harmonic Drones
+ 05. /compendium.html    -> Esoteric Celestial Gold & Vimshottari Dasha Matrix
+ 06. /echosh.html        -> Retro 1980s Synthwave CRT Terminal & DSP Soundboard
+================================================================================
 ```
 
----
+### 1. Root Dossier & Synesthetic Engine ([`/`](https://echosh-labs.com))
+- **Role:** Central capabilities index and interactive Web Audio 2.0 DSP synthesizer console.
+- **Aesthetic:** Minimalist deep space void (`#05070a`), refracted glass panels, glowing accent borders.
 
-## 🌌 Core Components
+### 2. Martial Arts Academy Engine ([`/martial-arts`](https://echosh-labs.com/martial-arts.html))
+- **Role:** High-throughput martial arts studio management engine and student portal showcase.
+- **Aesthetic:** Bold Crimson & Gold Dojo (`武道`), fiery text gradients (`text-dojo-gradient`), dojo glow shadows.
+- **Features:** 5-discipline curriculum sandbox (Kung Fu, Karate, Kobudo, Tai Chi, Qigong), 21 SQL migration tiers visualizer, and live interactive token ledger simulator with instant cancellation refunds.
 
-### 1. Echo SH Labs (`echosh-labs.com`)
-The operational business entity stewarding the platform, research archives, and open protocols.
+### 3. Axis Mundi Engine ([`/axis-mundi`](https://echosh-labs.com/axis-mundi.html))
+- **Role:** High-speed zero-token voice ingestion daemon in Go.
+- **Aesthetic:** Cybernetic Neon Violet & Emerald, CRT scanline overlay (`.scanline-crt`), monospace telemetry logs.
+- **Features:** Interactive JSON-RPC 2.0 MCP tool sandbox, split-pane TUI terminal with simulated live SSE telemetry stream.
 
-### 2. Foundations Storyboard (`/foundations`)
-The narrative and architectural core of the platform:
-- **01 / Intuition (432 Hz Harmonic):** The inner staircase; stillness and sensory calibration.
-- **02 / Idealism (528 Hz Solfeggio):** The ascent of aspiration; structural purpose and sacred geometry.
-- **03 / Illumination (141.27 Hz Mercury Quicksilver):** Radiant consciousness and unified clarity.
+### 4. Foundations Storyboard ([`/foundations`](https://echosh-labs.com/foundations.html))
+- **Role:** 4-stage philosophical and alchemical journey (Intuition, Idealism, Illumination, Genesis).
+- **Aesthetic:** Exhibition watercolor gallery, dynamic chromatic radial chakra glows matching frequencies (432Hz Violet, 528Hz Cyan, 639Hz Solar Gold, 741Hz Emerald).
+- **Features:** Interactive Web Audio harmonic frequency resonance button and full keyboard navigation (Arrows / Numbers 1-4 / Space).
 
-### 3. Axis Mundi Core Operational Engine (`internal/axismundi/`)
-The foundational operational infrastructure running continuously in the background:
-- **Zero-Token Passive Gatekeeper:** Ingests voice notes and written instructions from Google Keep without consuming AI tokens.
-- **Dual-Mode Control Engine:**
-  - **`AUTO`:** Continuous background polling with dynamic frequency (`10s`, `30s`, `60s`, `120s`, `300s`) and live countdown ticker.
-  - **`MANUAL`:** On-demand synchronization via `/api/axismundi/keep/sync` or keyboard shortcut `[S]`.
-- **Auto-Ingest Policy:**
-  - **`EXECUTE`:** Incoming notes with `#amra-exec` or tagged intent are queued directly for agent execution (`QUEUED_FOR_AGENT`).
-  - **`PENDING`:** Passive contextual review (`PASSIVE_CONTEXT`).
-- **MCP Server (`/api/mcp`):** Native Model Context Protocol JSON-RPC 2.0 server enabling AI agents to query directives, update lifecycle statuses, trigger Keep syncs, and modify system modes.
-- **Interactive TUI Console (`/terminal`):** Real-time web-based terminal user interface with full keyboard shortcuts matrix, 3D C60 Buckyball wireframe, live SSE telemetry, and item inspector drawer.
+### 5. Astrological & Alchemical Compendium ([`/compendium`](https://echosh-labs.com/compendium.html))
+- **Role:** Esoteric matrix powering the Mercury Dash architecture.
+- **Aesthetic:** Celestial Gold & Quicksilver metallic sheen.
+- **Features:** 17-Year Vimshottari Mahadasha planetary transit visualizer, interactive relational context knowledge graph explorer, quicksilver fluid crucible, and ancient Hermetic axiom parchment panels.
 
-### 4. Amra Core (The Architecture of Giving)
-The core mechanics of giving, value flow, and reciprocal energy exchange, preserved within BoltDB for future expansions.
-
-### 5. BoltDB & Context Graph (`backend/data/mercury_context.db`)
-High-performance embedded B+Tree key-value database storing the contextual knowledge graph, dynamic relations, 17-year Dasha cycles, and the author's opus.
+### 6. echoSH Origin Progenitor ([`/echosh`](https://echosh-labs.com/echosh.html))
+- **Role:** The original August 2025 Electron.js synesthetic terminal environment that birthed the procedural audio architecture.
+- **Aesthetic:** Retro 1980s Synthwave, CRT scanlines, tactile keycaps (`.keycap-pill`).
+- **Features:** Interactive CLI command prompt simulator with real-time Web Audio DSP synthesis and 42 generative sound presets.
 
 ---
 
-## 🚀 Quick Start & Developer Workflows
+## 🛠️ Development & Deployment Pipeline
 
-The platform is managed via a standardized `Makefile` and script suite in `scripts/`:
-
-### 1. Automated Test Suite (Go Race Tests + Vitest + 22 HTTP Route Contract Assertions)
 ```bash
-make test
-# or: bash scripts/test.sh
-```
+# ⚡ Start local Next.js development server (http://localhost:3000)
+pnpm dev
 
-### 2. Live Development Mode (Go Backend on :8080 + Next.js Hot-Reload on :3000)
-```bash
-make dev
-# or: bash scripts/dev.sh
-```
+# 🧪 Run Vitest test suite and route integrity tests
+pnpm test
 
-### 3. Production Build (Single 11MB Binary with Embedded UI)
-```bash
-make build
-# or: bash scripts/build.sh
-```
+# 🔍 Typecheck TypeScript source
+pnpm typecheck
 
-### 4. Run Standalone Singular Binary
-```bash
-make run
-# or directly: ./mercury-dasha-server -port 3000
-```
+# 🏗️ Compile static export into ./out and generate directory indices
+bash scripts/verify.sh
 
-### 5. Clean Environment & Release File Locks
-```bash
-make clean
-# or: bash scripts/clean.sh
+# 🚀 Sync static artifacts to Google Cloud Storage (gs://echosh-labs.com)
+bash scripts/deploy.sh
 ```
 
 ---
 
-## 📡 API & Protocol Endpoints
+## ☁️ Google Cloud Storage Hosting Architecture
 
-### Axis Mundi & MCP Engine
-| Endpoint | Method | Description |
-| :--- | :--- | :--- |
-| `/api/axismundi/directives` | `GET` | List all stored directives in registry |
-| `/api/axismundi/directives/pending` | `GET` | Filtered list of queued `[EXECUTE]` directives |
-| `/api/axismundi/directives/{id}/status` | `POST` | Update directive status & execution log |
-| `/api/axismundi/directives/{id}` | `DELETE` | Permanently delete a directive |
-| `/api/axismundi/workspace/status` | `GET` | Google Workspace auth & Domain-Wide Delegation status |
-| `/api/axismundi/mode` | `GET` / `POST` | Get or set engine mode (`AUTO`/`MANUAL`), policy (`EXECUTE`/`PENDING`), and `poll_interval_sec` |
-| `/api/axismundi/keep/sync` | `GET` / `POST` | Trigger immediate on-demand Google Keep sync |
-| `/api/stream/events` | `GET (SSE)` | Real-time Server-Sent Events stream (tick countdown, telemetry, execution alerts) |
-| `/api/mcp` | `POST` | Model Context Protocol JSON-RPC 2.0 interface |
-
-### Foundations & Mercury Core
-| Endpoint | Method | Description |
-| :--- | :--- | :--- |
-| `/api/health` | `GET` | Health check and datastore status (BoltDB + Postgres) |
-| `/api/foundations/narrative` | `GET` | Foundations narrative staircase (Intuition, Idealism, Illumination) |
-| `/api/audio/presets` | `GET` | Synesthetic audio presets and planetary frequencies |
-| `/api/statement` | `GET` | Singular foundational statement on Mercury |
-| `/api/context` | `GET` | Knowledge graph nodes from BoltDB |
-| `/api/dasha` | `GET` | 17-Year Mercury Mahadasha and 9 Antardashas |
-| `/api/nakshatras` | `GET` | 3 Mercurial Nakshatras (*Ashlesha*, *Jyeshtha*, *Revati*) |
-| `/api/alchemical` | `GET` | Tria Prima and Quicksilver alchemical properties |
-| `/api/author` | `GET` | Author bio, treatises, and chronological milestones |
-
----
-
-## ⌨️ Axis Mundi Terminal Keyboard Shortcuts
-
-| Key | Action |
-| :--- | :--- |
-| `[A]` | Switch engine to `AUTO` mode (background polling) |
-| `[M]` | Switch engine to `MANUAL` mode (on-demand only) |
-| `[E]` / `[P]` | Toggle Auto-Ingest Policy between `EXECUTE` and `PENDING` |
-| `[S]` | Trigger immediate Google Keep API synchronization |
-| `[R]` | Refresh registry and system state |
-| `[H]` | Toggle Help & API Reference Overlay Modal |
-| `[↑]` / `[↓]` | Navigate highlighted directive in registry list |
-| `[Enter]` / `[Space]` | Open Item Inspector Drawer |
-| `[1]` - `[5]` | Quick status shortcut (`[1]` Pending, `[2]` Execute, `[3]` Run, `[4]` Done, `[5]` Archive) |
-| `[Del]` / `[Bksp]` | Purge selected directive |
-| `[Esc]` | Close Inspector Drawer or Help Modal |
-
----
-
-## 📜 License & Organization
-
-Operated by **Echo SH Labs** (`echosh-labs.com`).  
-Authored by **Justin Andrew Wood**.  
-&copy; 2026 Echo SH Labs. All rights reserved.
+- **Target Bucket:** `gs://echosh-labs.com`
+- **Routing Configuration:** Configured with `--web-main-page-suffix=index.html` and `--web-error-page=404.html`.
+- **Clean URL Resolution:** Generates directory indices (`out/<route>/index.html`) so both extensionless (`/martial-arts`) and trailing-slash (`/martial-arts/`) URLs resolve cleanly with `200 OK`.
+- **Cache-Control:** All HTML entry points deployed with `no-store, no-cache, must-revalidate` for immediate propagation.

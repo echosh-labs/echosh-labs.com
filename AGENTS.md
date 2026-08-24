@@ -1,90 +1,58 @@
-# AGENTS.md - Echo SH Labs Architecture & Agent Operating Standards
+# 🌌 AGENTS.md — Echo SH Labs Dossier Frontend Standards
 
 > **Organization:** [Echo SH Labs](https://echosh-labs.com) (`echosh-labs.com`)  
-> **Project:** Mercury Dash Dossier (Architect's Portfolio & Web Audio Synthesis)  
+> **Project:** Master Systems Dossier & Web Audio DSP Portal  
 > **Author & Architect:** Justin Andrew Wood  
-> **Repository:** `/home/justin/code/mercury-dasha`
+> **Repository Path:** `/home/justin/code/echosh-labs/echosh-labs.com`  
+> **Deployment Target:** Google Cloud Storage (`gs://echosh-labs.com`)  
 
 ---
 
-## 🏛️ CORE ARCHITECTURAL LAWS (NON-NEGOTIABLE)
+## 🏛️ 1. Core Architectural Principles
 
-### 1. MANDATORY PLANNING MODE BY DEFAULT
-- **Plan Before Code:** Every agent MUST formulate a detailed `implementation_plan.md` before making architectural changes or writing code.
-- **Explicit Approval Required:** Stop and await user confirmation before executing any plan.
-- **Organizational Governance:** Echo SH Labs is the primary operational and business entity. All forward-facing branding and documentation adhere to `echosh-labs.com`.
+### A. Pure Static Architecture (`output: 'export'`)
+- **Zero Runtime Backend:** This package is a purely static Next.js 14 frontend export. There are no runtime Go servers, Node.js express daemons, or database connections in this directory.
+- **Client-Side Interactive Sandboxes:** All system interactions (e.g. Martial Arts token ledger, Axis Mundi MCP runner, Compendium Dasha engine, echoSH terminal simulator) must execute entirely in-browser using local state and pure React / Web Audio.
+- **Directory Index Generation:** Static builds must produce `out/<route>/index.html` alongside `out/<route>.html` to maintain clean URL resolution on GCS.
 
-### 2. PURE STATIC ARCHITECTURE (NO BACKEND)
-- **Zero Runtime Dependencies:** This repository is a 100% static Next.js frontend export. There is no Go backend, no PostgreSQL, and no BoltDB.
-- **Static Asset Deployment:** The platform is compiled via `npm run build` and synced directly to Google Cloud Storage (`gs://echosh-labs.com`).
-- **No Background Daemons:** Do not attempt to run background Go servers, SSE streams, or Axis Mundi daemons in this repository. They have been archived and removed from the active stack.
-
-### 3. THE DOSSIER NARRATIVE
-- **Purpose:** The platform serves as a high-level "Architect's Dossier" for Justin Andrew Wood. It is an experiential CV bridging zero-token enterprise infrastructure with sensory-rich web audio synthesis.
-- **The Foundations:** The narrative follows a 3-stage visual and philosophical model: Intuition (The Void/Spark) ➔ Idealism (Structure/Architecture) ➔ Illumination (Autonomy/Action).
-
-### 4. SYNESTHETIC AUDIO ENGINE
-- **Core Mechanic:** The site heavily features procedural Web Audio 2.0 DSP synthesis.
-- **Implementation:** React hooks (`useAudioEngine`) interact with low-level AudioContext oscillators, FM synthesis, and Karplus-Strong string models. Keep this code clean, performant, and free of memory leaks.
-
-### 5. MANDATORY LOCAL DEV SERVER SPIN-UP & MANUAL TESTING PROTOCOL
-- **Live Local Availability:** At the conclusion of every iterative development step, the agent MUST automatically launch the Next.js development server on port 3000 (`npm run dev -- -p 3000` as a background daemon process).
-- **Manual Verification Step:** The user must be provided with direct localhost URLs to visually inspect and test the newly implemented features before proceeding to the next sequential step.
+### B. "Five Projects, Five Flavors" Styling Mandate
+- Each route must strictly preserve its authentic project aesthetic:
+  - `/martial-arts`: Bold Crimson & Gold Dojo (`武道`, `.text-dojo-gradient`, `.dojo-glow`)
+  - `/axis-mundi`: Cybernetic Violet & Emerald (`.scanline-crt`, MCP inspect panels)
+  - `/foundations`: Exhibition Watercolor Gallery (Chakra radial glows, harmonic frequencies)
+  - `/compendium`: Celestial Gold & Quicksilver (Vimshottari Dasha, relational knowledge graph)
+  - `/echosh`: Retro 1980s Synthwave CRT Terminal (Keycaps, interactive DSP terminal)
 
 ---
 
-## 2. Core Technology Stack
+## 🎙️ 2. Voice-Coding Session Protocols
 
-| Layer | Technology | Role & Details |
-| :--- | :--- | :--- |
-| **Organization & Business** | **Echo SH Labs** | Entity stewarding platform, branding, and operations (`echosh-labs.com`). |
-| **Frontend UI Shell** | **Next.js 14 (App Router)** | TypeScript, Tailwind CSS, Lucide icons, React Web Audio 2.0. |
-| **Deployment & Hosting** | **Google Cloud Storage** | Pure static hosting via `gs://echosh-labs.com` synced with `gcloud storage rsync`. |
-| **Styling & UI** | **Tailwind + Glassmorphism** | Deep space, minimalist glass aesthetics (`bg-mercury-950`, emerald accents). |
-
----
-
-## 3. Directory Structure & File Map
-
-```
-/home/justin/code/mercury-dasha/
-├── AGENTS.md                          # [THIS FILE] Echo SH Labs operating standards & agent instructions
-├── README.md                          # Comprehensive documentation & architecture specs
-├── scripts/                           # Standardized developer pipelines
-│   └── deploy.sh                      # Production GCS baseline deployment sync
-├── src/                               # Next.js 14 App Router Source
-│   ├── app/
-│   │   ├── page.tsx                   # The Architect's Dossier (Home Portal)
-│   │   ├── foundations/page.tsx       # Static Foundations Storyboard
-│   │   └── layout.tsx                 # Root layout & providers
-│   ├── features/                      # Domain-driven features (e.g., audio studio)
-│   ├── components/                    # Reusable UI primitives (Panel, Badge, Button)
-│   ├── hooks/                         # React hooks (`useAudioEngine`)
-│   └── lib/                           # Utility functions and audio synthesis engines
-├── public/                            # Static images and SVGs
-├── next.config.mjs                    # Next.js config (configured for `output: 'export'`)
-├── tailwind.config.ts                 # Custom design system colors and animations
-└── package.json                       # React/Next.js dependencies
-```
+When collaborating with the architect in voice-generated coding sessions:
+1. **Understand Architectural Synonyms:**
+   - Spoken "frontend" or "the site" ➔ `echosh-labs.com` dossier.
+   - Spoken "deploy" / "push update" ➔ execute `bash scripts/deploy.sh` or `make deploy`.
+2. **Strict Background Task Cleanup:**
+   - When the user issues commands like "shut down", "stop both tasks", or switches tasks, immediately terminate running background tasks using `manage_task(Action='kill')`. Never leave orphan Node/Go tasks consuming CPU/ports.
+3. **Continuous Verification:**
+   - Always run `npm test` and `bash scripts/verify.sh` prior to deploying.
 
 ---
 
-## 4. Developer & Operational Workflows
+## 🛠️ 3. Verification & Deployment Commands
 
-### A. Local Development Server
 ```bash
-npm run dev
-```
-Spins up the Next.js hot-reloading development server on `localhost:3000`.
+# Start local dev server
+pnpm dev
 
-### B. Building the Static Export
-```bash
-npm run build
-```
-Outputs the static HTML/CSS/JS bundles into the `./out` directory.
+# Run Vitest test suite (including route integrity tests)
+pnpm test
 
-### C. Deploying to Production (Google Cloud Storage)
-```bash
+# Validate TypeScript without emitting JS
+pnpm typecheck
+
+# Full pre-flight verification & directory index generation
+bash scripts/verify.sh
+
+# Deploy to Google Cloud Storage with cache invalidation
 bash scripts/deploy.sh
 ```
-Executes the Next.js build and aggressively syncs the `./out` directory to `gs://echosh-labs.com`, wiping any legacy unmatched files in the root bucket.
