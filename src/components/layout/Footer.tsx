@@ -61,6 +61,13 @@ export function Footer() {
             echoSH (Origin)
           </Link>
           <span>&bull;</span>
+          <Link
+            href="/archive"
+            className="text-slate-400 hover:text-emerald-400 transition-colors"
+          >
+            Archive (Legacy)
+          </Link>
+          <span>&bull;</span>
           <a
             href="https://github.com/echosh-labs"
             target="_blank"

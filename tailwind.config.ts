@@ -69,6 +69,9 @@ const config: Config = {
         serif: ["Cinzel", "Georgia", "Cambria", "serif"],
         mono: ["JetBrains Mono", "Menlo", "Courier New", "monospace"],
         sans: ["Inter", "system-ui", "sans-serif"],
+        pixel: ["'Press Start 2P'", "monospace"],
+        vt323: ["'VT323'", "monospace"],
+        silkscreen: ["'Silkscreen'", "cursive"],
       },
       boxShadow: {
         "glow-emerald": "0 0 20px -2px rgba(16, 185, 129, 0.35)",
@@ -77,6 +80,8 @@ const config: Config = {
         "glow-amber": "0 0 20px -2px rgba(245, 158, 11, 0.35)",
         "glow-cyan": "0 0 20px -2px rgba(6, 182, 212, 0.35)",
         "glow-silver": "0 0 20px -2px rgba(226, 232, 240, 0.25)",
+        "glow-retro": "0 0 15px rgba(34, 197, 94, 0.4), inset 0 0 10px rgba(34, 197, 94, 0.2)",
+        "glow-crt-amber": "0 0 15px rgba(245, 158, 11, 0.4), inset 0 0 10px rgba(245, 158, 11, 0.2)",
         "glass-inner": "inset 0 1px 1px 0 rgba(255, 255, 255, 0.08)",
         "tui-glow": "0 0 15px rgba(16, 185, 129, 0.2), inset 0 0 15px rgba(16, 185, 129, 0.05)",
       },

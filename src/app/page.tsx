@@ -149,9 +149,31 @@ export default function HomePage() {
                   </Panel>
                 </Link>
 
+                {/* 06 / Legacy Python Archive */}
+                <Link
+                  href="/archive"
+                  onClick={playUIClick}
+                  className="group block h-full"
+                >
+                  <Panel variant="default" interactive className="p-6 h-full flex flex-col space-y-4 hover:border-emerald-500/50 hover:shadow-glow-retro bg-gradient-to-b from-slate-900/90 to-emerald-950/20">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs font-mono text-emerald-400 font-medium tracking-wider flex items-center gap-1.5">
+                        <span className="font-pixel text-[9px] text-emerald-300">8-BIT</span> 06 / PYTHON ARCHIVE
+                      </span>
+                      <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-emerald-400 group-hover:-translate-y-0.5 transition-all" />
+                    </div>
+                    <h2 className="text-lg font-serif font-bold text-slate-100 group-hover:text-emerald-300 transition-colors">
+                      Legacy Python Archive
+                    </h2>
+                    <p className="text-xs text-slate-400 font-light leading-relaxed">
+                      Historical codebase museum: nitsujlabs blockchain & market models, Junto affective emotions, D&D currency ledgers, and aerodrome telemetry.
+                    </p>
+                  </Panel>
+                </Link>
+
               </div>
 
-              {/* 06 / Featured Astrological & Alchemical Compendium */}
+              {/* 07 / Featured Astrological & Alchemical Compendium */}
               <Link
                 href="/compendium"
                 onClick={playUIClick}
@@ -161,7 +183,7 @@ export default function HomePage() {
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div className="space-y-1.5 max-w-2xl">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-mono text-amber-400 font-medium tracking-wider">06 / ESOTERIC MATRIX</span>
+                        <span className="text-xs font-mono text-amber-400 font-medium tracking-wider">07 / ESOTERIC MATRIX</span>
                         <Badge variant="amber" size="xs">INTERACTIVE ENGINES</Badge>
                       </div>
                       <h2 className="text-xl font-serif font-bold text-slate-100 group-hover:text-amber-300 transition-colors">

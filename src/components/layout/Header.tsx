@@ -24,6 +24,7 @@ export function Header() {
     { href: "/axis-mundi", label: "Axis Mundi" },
     { href: "/martial-arts", label: "Martial Arts" },
     { href: "/echosh", label: "echoSH (Origin)" },
+    { href: "/archive", label: "Archive" },
   ];
 
   return (
