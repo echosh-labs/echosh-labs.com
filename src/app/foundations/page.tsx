@@ -136,6 +136,13 @@ export default function FoundationsPage() {
     setCurrentIndex(index);
   }, [playUIClick]);
 
+  const handleResonateHarmonic = useCallback(() => {
+    if (!currentStage) return;
+    setIsPlayingHarmonic(true);
+    playBlueprint(blueprint, currentStage.title);
+    setTimeout(() => setIsPlayingHarmonic(false), 2000);
+  }, [blueprint, currentStage, playBlueprint]);
+
   // Keyboard navigation: Arrows + Numbers 1-4 + Space
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -152,14 +159,7 @@ export default function FoundationsPage() {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleNext, handlePrev, handleSelectStage]);
-
-  const handleResonateHarmonic = () => {
-    if (!currentStage) return;
-    setIsPlayingHarmonic(true);
-    playBlueprint(blueprint, currentStage.title);
-    setTimeout(() => setIsPlayingHarmonic(false), 2000);
-  };
+  }, [handleNext, handlePrev, handleSelectStage, handleResonateHarmonic]);
 
   return (
     <div className="min-h-screen bg-mercury-950 text-slate-100 flex flex-col justify-between selection:bg-emerald-500/20 font-sans relative overflow-x-hidden">

@@ -93,12 +93,14 @@ export default function HomePage() {
                   onClick={playUIClick}
                   className="group block h-full"
                 >
-                  <Panel variant="default" interactive className="p-6 h-full flex flex-col space-y-4 hover:border-amber-500/50 hover:shadow-glow-amber">
+                  <Panel variant="default" interactive className="p-6 h-full flex flex-col space-y-4 hover:border-red-500/60 hover:shadow-glow-amber bg-gradient-to-b from-slate-900/80 to-red-950/20">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-mono text-amber-400 font-medium tracking-wider">03 / RELATIONAL ENGINE</span>
-                      <Swords className="w-4 h-4 text-slate-500 group-hover:text-amber-400 group-hover:-translate-y-0.5 transition-all" />
+                      <span className="text-xs font-mono text-red-400 font-medium tracking-wider flex items-center gap-1">
+                        <span className="text-amber-400 font-bold">武道</span> 03 / DOJO ENGINE
+                      </span>
+                      <Swords className="w-4 h-4 text-slate-500 group-hover:text-red-400 group-hover:-translate-y-0.5 transition-all" />
                     </div>
-                    <h2 className="text-lg font-serif font-bold text-slate-100 group-hover:text-amber-300 transition-colors">
+                    <h2 className="text-lg font-serif font-bold text-slate-100 group-hover:text-red-300 transition-colors">
                       Martial Arts Academy
                     </h2>
                     <p className="text-xs text-slate-400 font-light leading-relaxed">
