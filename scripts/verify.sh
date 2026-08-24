@@ -43,6 +43,16 @@ if [ "$CSS_COUNT" -eq 0 ]; then
 fi
 
 echo "  ✔ Found $CSS_COUNT compiled CSS bundle(s)"
+
+# 5. Clean URL & Directory Index Preparation
+echo "▶ [5/5] Generating clean URL directory indices for static hosting..."
+CLEAN_ROUTES=("compendium" "foundations" "axis-mundi" "martial-arts" "echosh")
+for r in "${CLEAN_ROUTES[@]}"; do
+  mkdir -p "out/$r"
+  cp "out/$r.html" "out/$r/index.html"
+  echo "  ✔ Generated out/$r/index.html"
+done
+
 echo ""
 echo "===================================================="
 echo "✅ ALL FRONTEND TESTS & STYLE VERIFICATIONS PASSED!"

@@ -16,8 +16,17 @@ cd "$PROJECT_DIR"
 echo "🧪 Running full pre-flight verification & test suite..."
 bash scripts/verify.sh
 
+echo "⚙️ Configuring GCS bucket static website defaults..."
+gcloud storage buckets update "$BUCKET" --web-main-page-suffix=index.html --web-error-page=404.html || true
+
 echo "☁️ Syncing static artifacts to $BUCKET (and deleting legacy files)..."
 gcloud storage rsync ./out $BUCKET --recursive --delete-unmatched-destination-objects
+
+echo "🌐 Uploading clean extensionless HTML objects to $BUCKET..."
+CLEAN_ROUTES=("compendium" "foundations" "axis-mundi" "martial-arts" "echosh")
+for r in "${CLEAN_ROUTES[@]}"; do
+  gcloud storage cp "./out/$r.html" "$BUCKET/$r" --content-type="text/html" --cache-control="no-store, no-cache, must-revalidate" || true
+done
 
 echo "⚡ Applying Cache-Control headers for HTML entry points..."
 gcloud storage objects update $BUCKET/index.html --cache-control="no-store, no-cache, must-revalidate" || true
