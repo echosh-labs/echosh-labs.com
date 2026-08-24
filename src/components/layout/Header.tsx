@@ -22,6 +22,7 @@ export function Header() {
     { href: "/compendium", label: "Compendium" },
     { href: "/foundations", label: "Foundations" },
     { href: "/axis-mundi", label: "Axis Mundi" },
+    { href: "/martial-arts", label: "Martial Arts" },
     { href: "/echosh", label: "echoSH (Origin)" },
   ];
 

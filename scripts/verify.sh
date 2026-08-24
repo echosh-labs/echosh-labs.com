@@ -19,7 +19,7 @@ npm run build
 
 # 4. Artifact & Styling Verification
 echo "▶ [4/4] Validating static HTML & CSS export bundle..."
-ROUTES=("index.html" "compendium.html" "foundations.html" "axis-mundi.html" "echosh.html" "404.html")
+ROUTES=("index.html" "compendium.html" "foundations.html" "axis-mundi.html" "martial-arts.html" "echosh.html" "404.html")
 
 for route in "${ROUTES[@]}"; do
   FILE="out/$route"

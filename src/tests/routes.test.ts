@@ -10,6 +10,7 @@ describe("Core Static Routes Integrity", () => {
     { name: "Astrological Compendium", path: path.join(appDir, "compendium/page.tsx") },
     { name: "Foundations Storyboard", path: path.join(appDir, "foundations/page.tsx") },
     { name: "Axis Mundi Archive", path: path.join(appDir, "axis-mundi/page.tsx") },
+    { name: "Martial Arts Relational Engine", path: path.join(appDir, "martial-arts/page.tsx") },
     { name: "echoSH Progenitor", path: path.join(appDir, "echosh/page.tsx") },
   ];
 
@@ -32,18 +33,20 @@ describe("Core Static Routes Integrity", () => {
     const headerContent = fs.readFileSync(headerPath, "utf-8");
     const footerContent = fs.readFileSync(footerPath, "utf-8");
 
-    // Header must link to all 5 routes
+    // Header must link to all 6 routes
     expect(headerContent).toContain('"/"');
     expect(headerContent).toContain('"/compendium"');
     expect(headerContent).toContain('"/foundations"');
     expect(headerContent).toContain('"/axis-mundi"');
+    expect(headerContent).toContain('"/martial-arts"');
     expect(headerContent).toContain('"/echosh"');
 
-    // Footer must link to all 5 routes
+    // Footer must link to all 6 routes
     expect(footerContent).toContain('"/"');
     expect(footerContent).toContain('"/compendium"');
     expect(footerContent).toContain('"/foundations"');
     expect(footerContent).toContain('"/axis-mundi"');
+    expect(footerContent).toContain('"/martial-arts"');
     expect(footerContent).toContain('"/echosh"');
   });
 });

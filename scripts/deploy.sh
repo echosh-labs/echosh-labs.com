@@ -24,6 +24,7 @@ gcloud storage objects update $BUCKET/index.html --cache-control="no-store, no-c
 gcloud storage objects update $BUCKET/compendium.html --cache-control="no-store, no-cache, must-revalidate" || true
 gcloud storage objects update $BUCKET/foundations.html --cache-control="no-store, no-cache, must-revalidate" || true
 gcloud storage objects update $BUCKET/axis-mundi.html --cache-control="no-store, no-cache, must-revalidate" || true
+gcloud storage objects update $BUCKET/martial-arts.html --cache-control="no-store, no-cache, must-revalidate" || true
 gcloud storage objects update $BUCKET/echosh.html --cache-control="no-store, no-cache, must-revalidate" || true
 
 echo "=========================================================="

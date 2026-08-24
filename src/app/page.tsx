@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Sparkles, ArrowUpRight, Music2, Waves, Volume2, VolumeX, Code2, Network } from "lucide-react";
+import { Sparkles, ArrowUpRight, Music2, Waves, Volume2, VolumeX, Code2, Network, Swords } from "lucide-react";
 import { useAudioEngine } from "@/hooks/useAudioEngine";
 import { SynestheticAudioConsole } from "@/features/audio/SynestheticAudioConsole";
 import { Badge } from "@/components/ui/Badge";
@@ -46,7 +46,7 @@ export default function HomePage() {
               </div>
 
               {/* The Dossier Navigation (Capabilities) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
                 
                 {/* 01 / Synesthetic Audio */}
                 <button
@@ -87,7 +87,27 @@ export default function HomePage() {
                   </Panel>
                 </Link>
 
-                {/* 03 / Foundations Narrative */}
+                {/* 03 / Martial Arts Academy */}
+                <Link
+                  href="/martial-arts"
+                  onClick={playUIClick}
+                  className="group block h-full"
+                >
+                  <Panel variant="default" interactive className="p-6 h-full flex flex-col space-y-4 hover:border-amber-500/50 hover:shadow-glow-amber">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs font-mono text-amber-400 font-medium tracking-wider">03 / RELATIONAL ENGINE</span>
+                      <Swords className="w-4 h-4 text-slate-500 group-hover:text-amber-400 group-hover:-translate-y-0.5 transition-all" />
+                    </div>
+                    <h2 className="text-lg font-serif font-bold text-slate-100 group-hover:text-amber-300 transition-colors">
+                      Martial Arts Academy
+                    </h2>
+                    <p className="text-xs text-slate-400 font-light leading-relaxed">
+                      Zero-token relational studio engine: Go REST API, 21 SQL migration tiers, token ledger accounting, and 5-discipline curriculum simulator.
+                    </p>
+                  </Panel>
+                </Link>
+
+                {/* 04 / Foundations Narrative */}
                 <Link
                   href="/foundations"
                   onClick={playUIClick}
@@ -95,7 +115,7 @@ export default function HomePage() {
                 >
                   <Panel variant="default" interactive className="p-6 h-full flex flex-col space-y-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-mono text-emerald-400 font-medium tracking-wider">03 / PHILOSOPHY</span>
+                      <span className="text-xs font-mono text-emerald-400 font-medium tracking-wider">04 / PHILOSOPHY</span>
                       <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-emerald-400 group-hover:-translate-y-0.5 transition-all" />
                     </div>
                     <h2 className="text-lg font-serif font-bold text-slate-100 group-hover:text-emerald-300 transition-colors">
@@ -107,7 +127,7 @@ export default function HomePage() {
                   </Panel>
                 </Link>
 
-                {/* 04 / echoSH Progenitor */}
+                {/* 05 / echoSH Progenitor */}
                 <Link
                   href="/echosh"
                   onClick={playUIClick}
@@ -115,7 +135,7 @@ export default function HomePage() {
                 >
                   <Panel variant="default" interactive className="p-6 h-full flex flex-col space-y-4 hover:border-cyan-500/50 hover:shadow-glow-cyan">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-mono text-cyan-400 font-medium tracking-wider">04 / ORIGIN ARCHIVE</span>
+                      <span className="text-xs font-mono text-cyan-400 font-medium tracking-wider">05 / ORIGIN ARCHIVE</span>
                       <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 group-hover:-translate-y-0.5 transition-all" />
                     </div>
                     <h2 className="text-lg font-serif font-bold text-slate-100 group-hover:text-cyan-300 transition-colors">
@@ -129,7 +149,7 @@ export default function HomePage() {
 
               </div>
 
-              {/* 05 / Featured Astrological & Alchemical Compendium */}
+              {/* 06 / Featured Astrological & Alchemical Compendium */}
               <Link
                 href="/compendium"
                 onClick={playUIClick}
@@ -139,7 +159,7 @@ export default function HomePage() {
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div className="space-y-1.5 max-w-2xl">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-mono text-amber-400 font-medium tracking-wider">05 / ESOTERIC MATRIX</span>
+                        <span className="text-xs font-mono text-amber-400 font-medium tracking-wider">06 / ESOTERIC MATRIX</span>
                         <Badge variant="amber" size="xs">INTERACTIVE ENGINES</Badge>
                       </div>
                       <h2 className="text-xl font-serif font-bold text-slate-100 group-hover:text-amber-300 transition-colors">

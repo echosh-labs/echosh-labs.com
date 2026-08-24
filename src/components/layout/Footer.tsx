@@ -48,6 +48,13 @@ export function Footer() {
           </Link>
           <span>&bull;</span>
           <Link
+            href="/martial-arts"
+            className="text-slate-400 hover:text-amber-300 transition-colors"
+          >
+            Martial Arts
+          </Link>
+          <span>&bull;</span>
+          <Link
             href="/echosh"
             className="text-slate-400 hover:text-emerald-300 transition-colors"
           >
