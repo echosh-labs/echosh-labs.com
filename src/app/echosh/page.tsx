@@ -16,9 +16,12 @@ import {
   Command,
   Disc3,
   ShieldCheck,
-  Flame
+  Flame,
+  Palette,
+  Check
 } from "lucide-react";
 import { useAudioEngine } from "@/hooks/useAudioEngine";
+import { useStyleEngine, ThemeFlavor, THEME_CONFIGS } from "@/context/StyleEngineContext";
 import { 
   fmCyberRhodes, 
   fmMetallicSpaceBell, 
@@ -30,6 +33,7 @@ import {
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Panel } from "@/components/ui/Panel";
+import { EchoSHLogo } from "@/components/ui/EchoSHLogo";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -50,6 +54,7 @@ export default function EchoSHProgenitorPage() {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const { playBlueprint, playUIClick, isMuted } = useAudioEngine();
+  const { theme: activeGlobalTheme, setTheme, toggleCustomizer } = useStyleEngine();
 
   // Auto-scroll terminal
   useEffect(() => {
@@ -144,9 +149,12 @@ export default function EchoSHProgenitorPage() {
             <Disc3 className="w-4 h-4 text-emerald-400 animate-spin" style={{ animationDuration: '6s' }} />
             <span>ORIGIN ARCHIVE // THE ACOUSTIC PROGENITOR (EST. AUG 2025)</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-serif font-bold text-slate-100 tracking-tight leading-tight">
-            echoSH: The Synesthetic Terminal
-          </h1>
+          <div className="flex flex-wrap items-baseline gap-3">
+            <EchoSHLogo size="2xl" variant="auto" prompt=">" interactive />
+            <h1 className="text-3xl sm:text-5xl font-serif font-bold text-slate-100 tracking-tight leading-tight">
+              : The Synesthetic Terminal
+            </h1>
+          </div>
           <p className="text-slate-400 text-sm sm:text-base font-light leading-relaxed">
             In standard computing, the terminal is a silent, visual affair. Engineered in August 2025 as a standalone Electron desktop environment, <strong className="text-slate-200 font-medium">echoSH</strong> pioneered the auditory feedback loop for software engineering—transmuting every keystroke, command, and compilation process into a unique generative sonic event.
           </p>
@@ -343,6 +351,206 @@ export default function EchoSHProgenitorPage() {
             </Panel>
           </div>
         </div>
+
+        {/* echoSH Brand Identity & Styling Matrix */}
+        <Panel variant="default" className="p-6 sm:p-8 space-y-6 border-slate-800 bg-gradient-to-br from-slate-950 via-slate-900/60 to-emerald-950/20">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-emerald-400" />
+                <span className="text-xs font-mono text-emerald-400 font-semibold tracking-wider">BRAND ARCHITECTURE // COLOR DIFFERENTIAL SPEC</span>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-serif font-bold text-slate-100">
+                echoSH Visual Identity & CSS Styling Engine
+              </h2>
+              <p className="text-xs text-slate-400 font-light max-w-2xl leading-relaxed">
+                The brand architecture pairs lowercase <code className="text-slate-200 font-mono font-semibold">echo</code> (acoustic resonance, quicksilver metal) immediately with capitalized <code className="text-emerald-400 font-mono font-extrabold">SH</code> (POSIX shell power, neon phosphor glow). Click any theme card below or use the customizer drawer to dynamically reskin the entire dossier in real-time.
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={toggleCustomizer}
+                className="text-xs font-mono border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 flex items-center gap-1.5"
+              >
+                <Palette className="w-3.5 h-3.5" />
+                THEME STUDIO
+              </Button>
+              <Badge variant="emerald" size="sm" dot pulseDot>
+                ACTIVE: {activeGlobalTheme.toUpperCase()}
+              </Badge>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+            {/* Emerald Signature */}
+            <div 
+              onClick={() => setTheme('emerald')}
+              className={`p-4 rounded-xl transition-all cursor-pointer space-y-3 ${
+                activeGlobalTheme === 'emerald'
+                  ? 'bg-emerald-950/25 border-2 border-emerald-500 shadow-glow-emerald ring-1 ring-emerald-500/40'
+                  : 'bg-slate-950/80 border border-emerald-500/30 hover:border-emerald-500/60 shadow-glow-emerald/10'
+              }`}
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-mono uppercase text-slate-400 font-bold">01 / EMERALD SIGNATURE</span>
+                {activeGlobalTheme === 'emerald' ? (
+                  <Badge variant="emerald" size="xs" dot>✓ ACTIVE THEME</Badge>
+                ) : (
+                  <Badge variant="emerald" size="xs">SELECT</Badge>
+                )}
+              </div>
+              <div className="py-3 px-2 bg-black/40 rounded-lg flex items-center justify-center">
+                <EchoSHLogo size="lg" variant="emerald" prompt=">" interactive suffix="-labs" />
+              </div>
+              <p className="text-[11px] text-slate-400 leading-relaxed font-light">
+                Quicksilver platinum <strong className="text-slate-200">echo</strong> + electric phosphor emerald <strong className="text-emerald-400">SH</strong>. Optimized for dark CRT void surfaces.
+              </p>
+              <div className="pt-1 flex items-center justify-between text-[10px] font-mono text-emerald-400">
+                <span>528 Hz Harmonic</span>
+                <span className="text-slate-500 underline underline-offset-2">Click to Apply</span>
+              </div>
+            </div>
+
+            {/* Luna Cyan */}
+            <div 
+              onClick={() => setTheme('cyan')}
+              className={`p-4 rounded-xl transition-all cursor-pointer space-y-3 ${
+                activeGlobalTheme === 'cyan'
+                  ? 'bg-cyan-950/25 border-2 border-cyan-400 shadow-glow-cyan ring-1 ring-cyan-400/40'
+                  : 'bg-slate-950/80 border border-cyan-500/30 hover:border-cyan-500/60 shadow-glow-cyan/10'
+              }`}
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-mono uppercase text-slate-400 font-bold">02 / LUNA CYAN</span>
+                {activeGlobalTheme === 'cyan' ? (
+                  <Badge variant="cyan" size="xs" dot>✓ ACTIVE THEME</Badge>
+                ) : (
+                  <Badge variant="cyan" size="xs">SELECT</Badge>
+                )}
+              </div>
+              <div className="py-3 px-2 bg-black/40 rounded-lg flex items-center justify-center">
+                <EchoSHLogo size="lg" variant="cyan" prompt="~" interactive suffix="LABS" suffixVariant="badge" />
+              </div>
+              <p className="text-[11px] text-slate-400 leading-relaxed font-light">
+                Quicksilver <strong className="text-slate-200">echo</strong> + 528 Hz Luna cyan <strong className="text-cyan-400">SH</strong> with modern pill badge indicator.
+              </p>
+              <div className="pt-1 flex items-center justify-between text-[10px] font-mono text-cyan-400">
+                <span>528 Hz Telemetry</span>
+                <span className="text-slate-500 underline underline-offset-2">Click to Apply</span>
+              </div>
+            </div>
+
+            {/* Hermetic Amber */}
+            <div 
+              onClick={() => setTheme('amber')}
+              className={`p-4 rounded-xl transition-all cursor-pointer space-y-3 ${
+                activeGlobalTheme === 'amber'
+                  ? 'bg-amber-950/25 border-2 border-amber-400 shadow-glow-amber ring-1 ring-amber-400/40'
+                  : 'bg-slate-950/80 border border-amber-500/30 hover:border-amber-500/60 shadow-glow-amber/10'
+              }`}
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-mono uppercase text-slate-400 font-bold">03 / HERMETIC GOLD</span>
+                {activeGlobalTheme === 'amber' ? (
+                  <Badge variant="amber" size="xs" dot>✓ ACTIVE THEME</Badge>
+                ) : (
+                  <Badge variant="amber" size="xs">SELECT</Badge>
+                )}
+              </div>
+              <div className="py-3 px-2 bg-black/40 rounded-lg flex items-center justify-center">
+                <EchoSHLogo size="lg" variant="amber" prompt="$" interactive suffix="v0.5" />
+              </div>
+              <p className="text-[11px] text-slate-400 leading-relaxed font-light">
+                Quicksilver <strong className="text-slate-200">echo</strong> + Hermetic solar amber <strong className="text-amber-400">SH</strong> matching Vimshottari Mahadasha lore.
+              </p>
+              <div className="pt-1 flex items-center justify-between text-[10px] font-mono text-amber-400">
+                <span>141.27 Hz Planetary</span>
+                <span className="text-slate-500 underline underline-offset-2">Click to Apply</span>
+              </div>
+            </div>
+
+            {/* Ether Violet */}
+            <div 
+              onClick={() => setTheme('violet')}
+              className={`p-4 rounded-xl transition-all cursor-pointer space-y-3 ${
+                activeGlobalTheme === 'violet'
+                  ? 'bg-violet-950/25 border-2 border-violet-400 shadow-glow-violet ring-1 ring-violet-400/40'
+                  : 'bg-slate-950/80 border border-violet-500/30 hover:border-violet-500/60 shadow-glow-violet/10'
+              }`}
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-mono uppercase text-slate-400 font-bold">04 / ETHER VIOLET</span>
+                {activeGlobalTheme === 'violet' ? (
+                  <Badge variant="violet" size="xs" dot>✓ ACTIVE THEME</Badge>
+                ) : (
+                  <Badge variant="violet" size="xs">SELECT</Badge>
+                )}
+              </div>
+              <div className="py-3 px-2 bg-black/40 rounded-lg flex items-center justify-center">
+                <EchoSHLogo size="lg" variant="violet" prompt="☿" interactive suffix="DSP" suffixVariant="badge" />
+              </div>
+              <p className="text-[11px] text-slate-400 leading-relaxed font-light">
+                Quicksilver <strong className="text-slate-200">echo</strong> + Ether 432 Hz harmonic violet <strong className="text-violet-400">SH</strong> with Hermetic glyph prompt.
+              </p>
+              <div className="pt-1 flex items-center justify-between text-[10px] font-mono text-violet-400">
+                <span>432 Hz Synthwave</span>
+                <span className="text-slate-500 underline underline-offset-2">Click to Apply</span>
+              </div>
+            </div>
+
+            {/* Liquid Platinum */}
+            <div 
+              onClick={() => setTheme('silver')}
+              className={`p-4 rounded-xl transition-all cursor-pointer space-y-3 ${
+                activeGlobalTheme === 'silver'
+                  ? 'bg-slate-900/60 border-2 border-slate-300 shadow-glow-silver ring-1 ring-slate-300/40'
+                  : 'bg-slate-950/80 border border-slate-700/50 hover:border-slate-500/60 shadow-glow-silver/10'
+              }`}
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-mono uppercase text-slate-400 font-bold">05 / PLATINUM SHIMMER</span>
+                {activeGlobalTheme === 'silver' ? (
+                  <Badge variant="silver" size="xs" dot>✓ ACTIVE THEME</Badge>
+                ) : (
+                  <Badge variant="silver" size="xs">SELECT</Badge>
+                )}
+              </div>
+              <div className="py-3 px-2 bg-black/40 rounded-lg flex items-center justify-center">
+                <EchoSHLogo size="lg" variant="silver" interactive suffix="PURE" />
+              </div>
+              <p className="text-[11px] text-slate-400 leading-relaxed font-light">
+                Pure monochromatic liquid metal gradient for understated high-density technical interfaces.
+              </p>
+              <div className="pt-1 flex items-center justify-between text-[10px] font-mono text-slate-300">
+                <span>216 Hz Octave</span>
+                <span className="text-slate-500 underline underline-offset-2">Click to Apply</span>
+              </div>
+            </div>
+
+            {/* Sans Geometric Variant */}
+            <div 
+              onClick={toggleCustomizer}
+              className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 hover:border-slate-600 transition-all cursor-pointer space-y-3"
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-mono uppercase text-slate-400 font-bold">06 / GEOMETRIC SANS</span>
+                <Badge variant="slate" size="xs">CUSTOMIZER</Badge>
+              </div>
+              <div className="py-3 px-2 bg-black/40 rounded-lg flex items-center justify-center">
+                <EchoSHLogo size="lg" variant="auto" font="sans" interactive suffix="-labs" />
+              </div>
+              <p className="text-[11px] text-slate-400 leading-relaxed font-light">
+                Rendered with clean modern geometric sans tracking. Adapts dynamically to your active theme flavor.
+              </p>
+              <div className="pt-1 flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>Sans Typography</span>
+                <span className="text-emerald-400 underline underline-offset-2">Open Drawer ➔</span>
+              </div>
+            </div>
+          </div>
+        </Panel>
 
         {/* The Evolution Story: Electron Desktop to Static Next.js Web */}
         <Panel variant="default" className="p-6 border-slate-800">

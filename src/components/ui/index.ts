@@ -6,3 +6,5 @@ export * from "./Skeleton";
 export * from "./Keycap";
 export * from "./Tabs";
 export * from "./Dialog";
+export * from "./EchoSHLogo";
+export * from "./VisualThemeDrawer";

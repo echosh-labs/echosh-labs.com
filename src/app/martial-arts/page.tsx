@@ -51,49 +51,73 @@ export default function MartialArtsPage() {
                 <Badge variant="amber" size="xs">SYSTEM ARCHIVE // 2026</Badge>
               </div>
 
-              <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-slate-100 uppercase leading-[1.05]">
-                Master Traditional{" "}
-                <span className="text-dojo-gradient">
-                  Martial Arts
-                </span>{" "}
-                & Internal Flow
-              </h1>
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div className="lg:col-span-8 space-y-4">
+                  <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-slate-100 uppercase leading-[1.05]">
+                    Master Traditional{" "}
+                    <span className="text-dojo-gradient">
+                      Martial Arts
+                    </span>{" "}
+                    & Internal Flow
+                  </h1>
 
-              <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed max-w-3xl">
-                A high-throughput, enterprise martial arts studio management engine and student portal. Designed as a zero-token relational system featuring a pure Go REST API, 21 SQL schema migration tiers in SQLite, double-entry token ledger accounting with instant cancellation refunds, a 5-discipline curriculum (Kung Fu, Karate, Kobudo, Tai Chi, Qigong), and automated belt grading evaluations.
-              </p>
+                  <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed max-w-2xl">
+                    A high-throughput, enterprise martial arts studio management engine and student portal. Designed as a zero-token relational system featuring a pure Go REST API, 21 SQL schema migration tiers in SQLite, double-entry token ledger accounting with instant cancellation refunds, a 5-discipline curriculum (Kung Fu, Karate, Kobudo, Tai Chi, Qigong), and automated belt grading evaluations.
+                  </p>
 
-              {/* Live Feature Checkmarks */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 font-mono text-xs text-slate-300 border-t border-slate-800/80">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-red-500 shrink-0" />
-                  <span>5 Core Disciplines</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-amber-500 shrink-0" />
-                  <span>Hybrid Live Dojo</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
-                  <span>Double-Entry Tokens</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-cyan-500 shrink-0" />
-                  <span>Go REST &lt;1ms API</span>
-                </div>
-              </div>
+                  {/* Live Feature Checkmarks */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 font-mono text-xs text-slate-300 border-t border-slate-800/80">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-red-500 shrink-0" />
+                      <span>5 Core Disciplines</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-amber-500 shrink-0" />
+                      <span>Hybrid Live Dojo</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                      <span>Double-Entry Tokens</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-cyan-500 shrink-0" />
+                      <span>Go REST &lt;1ms API</span>
+                    </div>
+                  </div>
 
-              {/* GitHub Link Button & Architecture Badges */}
-              <div className="pt-2 flex flex-wrap items-center gap-3">
-                <a
-                  href="https://github.com/echosh-labs/shaolin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-950/70 border border-red-700/60 text-red-200 hover:text-white hover:border-red-500 hover:bg-red-900/80 text-xs font-mono transition-all dojo-glow"
-                >
-                  <ExternalLink className="w-3.5 h-3.5" />
-                  <span>VIEW SOURCE REPOSITORY (echosh-labs/shaolin)</span>
-                </a>
+                  {/* GitHub Link Button & Architecture Badges */}
+                  <div className="pt-2 flex flex-wrap items-center gap-3">
+                    <a
+                      href="https://github.com/echosh-labs/shaolin"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-950/70 border border-red-700/60 text-red-200 hover:text-white hover:border-red-500 hover:bg-red-900/80 text-xs font-mono transition-all dojo-glow"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      <span>VIEW SOURCE REPOSITORY (echosh-labs/shaolin)</span>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Martial Arts Origin: Young Justin */}
+                <div className="lg:col-span-4 flex flex-col items-center">
+                  <div className="p-3 rounded-2xl border border-red-900/40 bg-red-950/30 backdrop-blur-sm space-y-2 shadow-2xl">
+                    <div className="relative rounded-xl overflow-hidden border border-red-800/60 aspect-[3/4] w-56 mx-auto">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src="/images/justin_young_martial_artist.jpg"
+                        alt="Young Justin striking a martial artist pose"
+                        className="w-full h-full object-cover contrast-105"
+                      />
+                    </div>
+                    <div className="text-center">
+                      <div className="text-xs font-bold text-slate-200 uppercase tracking-wider">The First Kata</div>
+                      <p className="text-[11px] font-mono text-amber-400/90 leading-tight">
+                        Young Justin in the yard: the spark of a lifelong martial journey.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 

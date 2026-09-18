@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# Echo SH Labs // Future Standalone Go API Cloud Run Deployment Template
+# ==============================================================================
+# Preserved for future instantiation of api.echosh-labs.com
+# ==============================================================================
+
+set -euo pipefail
+
+PROJECT_ID="${GCP_PROJECT_ID:-echosh-labs-prod}"
+REGION="${GCP_REGION:-us-central1}"
+REPO_NAME="${ARTIFACT_REPO:-mercury-dasha}"
+SERVICE_NAME="${SERVICE_NAME:-mercury-dasha-api}"
+IMAGE_NAME="engine"
+IMAGE_URI="${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}/${IMAGE_NAME}:latest"
+
+echo "=========================================================="
+echo "🚀 Deploying Standalone Go API to Cloud Run ($SERVICE_NAME)"
+echo "Project: $PROJECT_ID | Region: $REGION"
+echo "=========================================================="
+
+# 1. Build and push image via Google Cloud Build
+gcloud builds submit --tag "$IMAGE_URI" --project "$PROJECT_ID" .
+
+# 2. Deploy to Cloud Run with scale-to-zero ($0.00 idle cost)
+gcloud run deploy "$SERVICE_NAME" \
+    --image "$IMAGE_URI" \
+    --region "$REGION" \
+    --project "$PROJECT_ID" \
+    --allow-unauthenticated \
+    --memory=512Mi \
+    --cpu=1 \
+    --min-instances=0 \
+    --max-instances=1 \
+    --concurrency=250 \
+    --port=8080
+
+echo "✅ Cloud Run API deployment complete!"

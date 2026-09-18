@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { Github, Sparkles, Music2, ExternalLink } from "lucide-react";
+import { EchoSHLogo } from "@/components/ui/EchoSHLogo";
 
 export function Footer() {
   return (
@@ -14,7 +15,9 @@ export function Footer() {
             Justin Andrew Wood
           </Link>
           <span>&bull;</span>
-          <span><a href="https://echosh-labs.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-emerald-400 underline underline-offset-2">Echo SH Labs</a></span>
+          <Link href="/" className="hover:opacity-90 transition-opacity">
+            <EchoSHLogo size="xs" variant="auto" suffix="-labs" />
+          </Link>
         </div>
 
         {/* Center Links (Dossier & Archives) */}
@@ -56,9 +59,10 @@ export function Footer() {
           <span>&bull;</span>
           <Link
             href="/echosh"
-            className="text-slate-400 hover:text-emerald-300 transition-colors"
+            className="text-slate-400 hover:text-emerald-300 transition-colors inline-flex items-center"
           >
-            echoSH (Origin)
+            <EchoSHLogo size="xs" variant="auto" />
+            <span className="ml-1 text-[10px] text-slate-500">(Origin)</span>
           </Link>
           <span>&bull;</span>
           <Link
@@ -66,6 +70,20 @@ export function Footer() {
             className="text-slate-400 hover:text-emerald-400 transition-colors"
           >
             Archive (Legacy)
+          </Link>
+          <span>&bull;</span>
+          <Link
+            href="/services"
+            className="text-slate-400 hover:text-cyan-400 transition-colors"
+          >
+            Services (Telemetry)
+          </Link>
+          <span>&bull;</span>
+          <Link
+            href="/treasury"
+            className="text-slate-400 hover:text-emerald-400 transition-colors"
+          >
+            Treasury (Fiscal)
           </Link>
           <span>&bull;</span>
           <a

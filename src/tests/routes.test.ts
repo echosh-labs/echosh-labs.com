@@ -13,6 +13,8 @@ describe("Core Static Routes Integrity", () => {
     { name: "Martial Arts Relational Engine", path: path.join(appDir, "martial-arts/page.tsx") },
     { name: "echoSH Progenitor", path: path.join(appDir, "echosh/page.tsx") },
     { name: "Legacy Python Archive", path: path.join(appDir, "archive/page.tsx") },
+    { name: "Services & Telemetry", path: path.join(appDir, "services/page.tsx") },
+    { name: "Treasury & Fiscal Telemetry", path: path.join(appDir, "treasury/page.tsx") },
   ];
 
   requiredRoutes.forEach((route) => {
@@ -24,26 +26,27 @@ describe("Core Static Routes Integrity", () => {
     });
   });
 
-  it("should have unified Header and Footer components exported and used", () => {
+  it("should have streamlined Header with Mercury logo, echoSH-labs, and audio controls", () => {
     const headerPath = path.resolve(__dirname, "../components/layout/Header.tsx");
-    const footerPath = path.resolve(__dirname, "../components/layout/Footer.tsx");
-
     expect(fs.existsSync(headerPath)).toBe(true);
-    expect(fs.existsSync(footerPath)).toBe(true);
 
     const headerContent = fs.readFileSync(headerPath, "utf-8");
+    // Header links back to home
+    expect(headerContent).toContain('href="/"');
+    expect(headerContent).toContain("echoSH-labs");
+    expect(headerContent).toContain("☿");
+    // Audio controls
+    expect(headerContent).toContain("toggleAmbient");
+    expect(headerContent).toContain("toggleMute");
+  });
+
+  it("should have unified Footer linking to all 9 core dossier routes", () => {
+    const footerPath = path.resolve(__dirname, "../components/layout/Footer.tsx");
+    expect(fs.existsSync(footerPath)).toBe(true);
+
     const footerContent = fs.readFileSync(footerPath, "utf-8");
 
-    // Header must link to all 7 routes
-    expect(headerContent).toContain('"/"');
-    expect(headerContent).toContain('"/compendium"');
-    expect(headerContent).toContain('"/foundations"');
-    expect(headerContent).toContain('"/axis-mundi"');
-    expect(headerContent).toContain('"/martial-arts"');
-    expect(headerContent).toContain('"/echosh"');
-    expect(headerContent).toContain('"/archive"');
-
-    // Footer must link to all 7 routes
+    // Footer must link to all core routes
     expect(footerContent).toContain('"/"');
     expect(footerContent).toContain('"/compendium"');
     expect(footerContent).toContain('"/foundations"');
@@ -51,6 +54,7 @@ describe("Core Static Routes Integrity", () => {
     expect(footerContent).toContain('"/martial-arts"');
     expect(footerContent).toContain('"/echosh"');
     expect(footerContent).toContain('"/archive"');
+    expect(footerContent).toContain('"/services"');
+    expect(footerContent).toContain('"/treasury"');
   });
 });
-
