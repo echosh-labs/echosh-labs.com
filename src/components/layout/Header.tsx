@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Waves, Volume2, VolumeX, Palette } from "lucide-react";
+import { Waves, Volume2, VolumeX, Palette, Radio } from "lucide-react";
 import { useAudioEngine } from "@/hooks/useAudioEngine";
 import { useStyleEngine } from "@/context/StyleEngineContext";
 import { EchoSHLogo } from "@/components/ui/EchoSHLogo";
@@ -50,6 +50,17 @@ export function Header() {
 
         {/* Right: Ambient, Styling & Audio Controls */}
         <div className="flex items-center gap-2 sm:gap-2.5">
+          {/* Sovereign Video Transmissions Link */}
+          <Link
+            href="/transmissions"
+            onClick={playUIClick}
+            className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono border transition-all bg-red-950/40 border-red-500/40 text-red-300 hover:text-white hover:border-red-500/70"
+            title="Sovereign Video Transmissions & YouTube Archive"
+          >
+            <Radio className="w-3 h-3 text-red-400" />
+            <span className="hidden sm:inline">TRANSMISSIONS</span>
+          </Link>
+
           {/* Visual Styling Engine Toggle */}
           <button
             onClick={toggleCustomizer}

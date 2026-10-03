@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Github, Sparkles, Music2, ExternalLink } from "lucide-react";
+import { Github, Sparkles, Music2, ExternalLink, Radio } from "lucide-react";
 import { EchoSHLogo } from "@/components/ui/EchoSHLogo";
 
 export function Footer() {
@@ -27,6 +27,14 @@ export function Footer() {
             className="text-slate-400 hover:text-emerald-300 transition-colors"
           >
             Dossier
+          </Link>
+          <span>&bull;</span>
+          <Link
+            href="/transmissions"
+            className="text-red-400 hover:text-red-300 font-semibold transition-colors flex items-center gap-1"
+          >
+            <Radio className="w-3 h-3" />
+            <span>Transmissions (Video)</span>
           </Link>
           <span>&bull;</span>
           <Link
@@ -94,6 +102,17 @@ export function Footer() {
           >
             <Github className="w-3 h-3 text-slate-400" />
             <span>GitHub</span>
+            <ExternalLink className="w-2.5 h-2.5 opacity-60" />
+          </a>
+          <span>&bull;</span>
+          <a
+            href="https://www.youtube.com/@justinandrewwood"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-slate-400 hover:text-red-400 transition-colors"
+          >
+            <Radio className="w-3 h-3 text-red-500" />
+            <span>YouTube (@justinandrewwood)</span>
             <ExternalLink className="w-2.5 h-2.5 opacity-60" />
           </a>
         </div>
