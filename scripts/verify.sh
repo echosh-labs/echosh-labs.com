@@ -19,7 +19,7 @@ npm run build
 
 # 4. Artifact & Styling Verification
 echo "▶ [4/4] Validating static HTML & CSS export bundle..."
-ROUTES=("index.html" "compendium.html" "foundations.html" "axis-mundi.html" "martial-arts.html" "echosh.html" "archive.html" "services.html" "treasury.html" "404.html")
+ROUTES=("index.html" "compendium.html" "foundations.html" "axis-mundi.html" "martial-arts.html" "echosh.html" "archive.html" "services.html" "treasury.html" "transmissions.html" "404.html")
 
 for route in "${ROUTES[@]}"; do
   FILE="out/$route"
@@ -46,7 +46,7 @@ echo "  ✔ Found $CSS_COUNT compiled CSS bundle(s)"
 
 # 5. Clean URL & Directory Index Preparation
 echo "▶ [5/5] Generating clean URL directory indices for static hosting..."
-CLEAN_ROUTES=("compendium" "foundations" "axis-mundi" "martial-arts" "echosh" "archive" "services" "treasury" "chronicles/the-boy-from-battersea" "chronicles/the-first-nine-days" "chronicles/a-family-affair" "chronicles/mark-steven-wood")
+CLEAN_ROUTES=("compendium" "foundations" "axis-mundi" "martial-arts" "echosh" "archive" "services" "treasury" "transmissions" "chronicles/the-boy-from-battersea" "chronicles/the-first-nine-days" "chronicles/a-family-affair" "chronicles/mark-steven-wood")
 for r in "${CLEAN_ROUTES[@]}"; do
   mkdir -p "out/$r"
   cp "out/$r.html" "out/$r/index.html"

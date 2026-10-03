@@ -27,7 +27,7 @@ gcloud storage cp -r ./out/* "$BUCKET/"
 
 
 echo "🌐 Uploading clean extensionless HTML objects to $BUCKET..."
-CLEAN_ROUTES=("compendium" "foundations" "axis-mundi" "martial-arts" "echosh" "archive" "services" "treasury" "chronicles/the-boy-from-battersea" "chronicles/the-first-nine-days" "chronicles/a-family-affair" "chronicles/mark-steven-wood")
+CLEAN_ROUTES=("compendium" "foundations" "axis-mundi" "martial-arts" "echosh" "archive" "services" "treasury" "transmissions" "chronicles/the-boy-from-battersea" "chronicles/the-first-nine-days" "chronicles/a-family-affair" "chronicles/mark-steven-wood")
 for r in "${CLEAN_ROUTES[@]}"; do
   gcloud storage cp "./out/$r.html" "$BUCKET/$r" --content-type="text/html" --cache-control="no-store, no-cache, must-revalidate" || true
 done
@@ -42,6 +42,7 @@ gcloud storage objects update $BUCKET/echosh.html --cache-control="no-store, no-
 gcloud storage objects update $BUCKET/archive.html --cache-control="no-store, no-cache, must-revalidate" || true
 gcloud storage objects update $BUCKET/services.html --cache-control="no-store, no-cache, must-revalidate" || true
 gcloud storage objects update $BUCKET/treasury.html --cache-control="no-store, no-cache, must-revalidate" || true
+gcloud storage objects update $BUCKET/transmissions.html --cache-control="no-store, no-cache, must-revalidate" || true
 gcloud storage objects update $BUCKET/chronicles/the-boy-from-battersea.html --cache-control="no-store, no-cache, must-revalidate" || true
 gcloud storage objects update $BUCKET/chronicles/the-first-nine-days.html --cache-control="no-store, no-cache, must-revalidate" || true
 gcloud storage objects update $BUCKET/chronicles/a-family-affair.html --cache-control="no-store, no-cache, must-revalidate" || true
