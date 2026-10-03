@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { StyleEngineProvider } from "@/context/StyleEngineContext";
 import { VisualThemeDrawer } from "@/components/ui/VisualThemeDrawer";
+import { BrowserFeaturesHUD } from "@/components/ui/BrowserFeaturesHUD";
 
 export const metadata: Metadata = {
   title: "echoSH Labs | Justin Andrew Wood",
@@ -35,6 +36,9 @@ export default function RootLayout({
           
           {/* Global Theme & Visual Styling Drawer */}
           <VisualThemeDrawer />
+
+          {/* Chrome Native Browser Features & Accessibility HUD */}
+          <BrowserFeaturesHUD />
         </StyleEngineProvider>
       </body>
     </html>

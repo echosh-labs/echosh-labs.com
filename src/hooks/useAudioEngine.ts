@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect, useCallback } from "react";
 import { audioEngine } from "@/lib/audio/AudioEngine";
@@ -44,11 +44,48 @@ export function useAudioEngine() {
   const toggleAmbient = useCallback((targetFreq: number = 432) => {
     const active = audioEngine.toggleAmbientDrone(targetFreq);
     setIsAmbientActive(active);
+
+    // Chrome Media Session API
+    if (typeof window !== "undefined" && "mediaSession" in navigator) {
+      if (active) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: `Sovereign Ambient Resonance (${targetFreq} Hz)`,
+          artist: "Justin Andrew Wood • echoSH Labs",
+          album: "The Art of True Healing & Middle Pillar Synthesis",
+          artwork: [
+            { src: "/images/great_grandfather_vernon_wood.jpg", sizes: "512x512", type: "image/jpeg" },
+          ],
+        });
+        navigator.mediaSession.playbackState = "playing";
+        try {
+          navigator.mediaSession.setActionHandler("play", () => {
+            audioEngine.toggleAmbientDrone(targetFreq);
+            setIsAmbientActive(true);
+          });
+          navigator.mediaSession.setActionHandler("pause", () => {
+            audioEngine.toggleAmbientDrone(targetFreq);
+            setIsAmbientActive(false);
+          });
+          navigator.mediaSession.setActionHandler("stop", () => {
+            audioEngine.toggleAmbientDrone(targetFreq);
+            setIsAmbientActive(false);
+          });
+        } catch {
+          // Handlers ignored if unsupported
+        }
+      } else {
+        navigator.mediaSession.playbackState = "paused";
+      }
+    }
+
     return active;
   }, []);
 
   const setAmbientFrequency = useCallback((freq: number) => {
     audioEngine.setAmbientFrequency(freq);
+    if (typeof window !== "undefined" && "mediaSession" in navigator && navigator.mediaSession.metadata) {
+      navigator.mediaSession.metadata.title = `Sovereign Ambient Resonance (${freq} Hz)`;
+    }
   }, []);
 
   const playBlueprint = useCallback((bp: SoundBlueprint, name?: string) => {
@@ -77,6 +114,13 @@ export function useAudioEngine() {
 
   const playUIClick = useCallback(() => {
     audioEngine.playUIClick();
+    if (typeof window !== "undefined" && "vibrate" in navigator) {
+      try {
+        navigator.vibrate(12); // Subtle haptic tap on Chrome mobile
+      } catch {
+        // Ignored
+      }
+    }
   }, []);
 
   const playUIHover = useCallback(() => {
