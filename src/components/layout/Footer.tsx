@@ -20,7 +20,7 @@ export function Footer() {
           </Link>
         </div>
 
-        {/* Center Links (Dossier & Archives) */}
+        {/* Center Links (Sovereign Routes Matrix) */}
         <div className="flex flex-wrap items-center justify-center gap-4 text-[11px]">
           <Link
             href="/"
@@ -30,39 +30,46 @@ export function Footer() {
           </Link>
           <span>&bull;</span>
           <Link
-            href="/transmissions"
-            className="text-red-400 hover:text-red-300 font-semibold transition-colors flex items-center gap-1"
-          >
-            <Radio className="w-3 h-3" />
-            <span>Transmissions (Video)</span>
-          </Link>
-          <span>&bull;</span>
-          <Link
-            href="/compendium"
-            className="text-slate-400 hover:text-amber-300 transition-colors"
-          >
-            Compendium
-          </Link>
-          <span>&bull;</span>
-          <Link
             href="/foundations"
             className="text-slate-400 hover:text-emerald-300 transition-colors"
           >
-            Foundations Story
+            Foundations
+          </Link>
+          <span>&bull;</span>
+          <Link
+            href="/architecture"
+            className="text-slate-400 hover:text-emerald-300 transition-colors"
+          >
+            Architecture
+          </Link>
+          <span>&bull;</span>
+          <Link
+            href="/studio"
+            className="text-slate-400 hover:text-cyan-300 transition-colors"
+          >
+            Studio
           </Link>
           <span>&bull;</span>
           <Link
             href="/axis-mundi"
             className="text-slate-400 hover:text-violet-300 transition-colors"
           >
-            Axis Mundi (Archive)
+            Axis Mundi
           </Link>
           <span>&bull;</span>
           <Link
             href="/martial-arts"
             className="text-slate-400 hover:text-amber-300 transition-colors"
           >
-            Martial Arts
+            Dojo
+          </Link>
+          <span>&bull;</span>
+          <Link
+            href="/transmissions"
+            className="text-red-400 hover:text-red-300 font-semibold transition-colors flex items-center gap-1"
+          >
+            <Radio className="w-3 h-3" />
+            <span>Transmissions</span>
           </Link>
           <span>&bull;</span>
           <Link
@@ -71,27 +78,6 @@ export function Footer() {
           >
             <EchoSHLogo size="xs" variant="auto" />
             <span className="ml-1 text-[10px] text-slate-500">(Origin)</span>
-          </Link>
-          <span>&bull;</span>
-          <Link
-            href="/archive"
-            className="text-slate-400 hover:text-emerald-400 transition-colors"
-          >
-            Archive (Legacy)
-          </Link>
-          <span>&bull;</span>
-          <Link
-            href="/services"
-            className="text-slate-400 hover:text-cyan-400 transition-colors"
-          >
-            Services (Telemetry)
-          </Link>
-          <span>&bull;</span>
-          <Link
-            href="/treasury"
-            className="text-slate-400 hover:text-emerald-400 transition-colors"
-          >
-            Treasury (Fiscal)
           </Link>
           <span>&bull;</span>
           <a
@@ -111,23 +97,14 @@ export function Footer() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-slate-400 hover:text-red-400 transition-colors"
           >
-            <Radio className="w-3 h-3 text-red-500" />
-            <span>YouTube (@justinandrewwood)</span>
+            <span>YouTube</span>
             <ExternalLink className="w-2.5 h-2.5 opacity-60" />
           </a>
         </div>
 
-        {/* Right Status */}
-        <div className="flex items-center gap-3 text-[11px]">
-          <span className="flex items-center gap-1 text-emerald-400">
-            <Sparkles className="w-3 h-3 text-emerald-500" />
-            Static Architecture
-          </span>
-          <span>&bull;</span>
-          <span className="flex items-center gap-1 text-slate-400">
-            <Music2 className="w-3 h-3 text-slate-400" />
-            Web Audio DSP
-          </span>
+        {/* Right Info */}
+        <div className="text-[11px] text-slate-600 font-mono text-center md:text-right">
+          <span>&copy; 1903&ndash;2026 The Sovereign Estate. All Rights Reserved.</span>
         </div>
       </div>
     </footer>

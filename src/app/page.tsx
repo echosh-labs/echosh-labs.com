@@ -75,7 +75,7 @@ export default function HomePage() {
 
                   <div className="pt-2">
                     <Link
-                      href="/chronicles/the-boy-from-battersea"
+                      href="/foundations/the-boy-from-battersea"
                       className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-500 text-slate-950 font-sans font-semibold text-sm hover:bg-emerald-400 transition-all shadow-lg hover:shadow-emerald-500/25"
                     >
                       <span>Read Chapter 0</span>
@@ -86,14 +86,22 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* The Life Chronicles Index */}
+            {/* The Foundations of Sovereign Lineage */}
             <div className="space-y-6">
               <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-                <div className="flex items-center gap-2 text-xs font-mono text-slate-400 uppercase tracking-wider">
+                <Link 
+                  href="/foundations"
+                  className="flex items-center gap-2 text-xs font-mono text-slate-400 uppercase tracking-wider hover:text-emerald-400 transition-colors"
+                >
                   <BookOpen className="w-4 h-4 text-emerald-400" />
-                  <span>The Life Chronicles</span>
-                </div>
-                <span className="text-xs font-mono text-slate-500">VOYAGE 1890 – 2026</span>
+                  <span>The Foundations of Sovereign Lineage</span>
+                </Link>
+                <Link 
+                  href="/foundations"
+                  className="text-xs font-mono text-emerald-400 hover:underline flex items-center gap-1"
+                >
+                  <span>Explore Graph &rarr;</span>
+                </Link>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -259,45 +267,105 @@ export default function HomePage() {
             {/* Engineering & Systems Laboratories */}
             <div className="space-y-6 pt-6 border-t border-slate-900">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 text-xs font-mono text-slate-400 uppercase tracking-wider">
+                <Link
+                  href="/architecture"
+                  className="flex items-center gap-2 text-xs font-mono text-slate-400 uppercase tracking-wider hover:text-emerald-400 transition-colors"
+                >
                   <Terminal className="w-4 h-4 text-emerald-400" />
-                  <span>The Systems Laboratory</span>
-                </div>
-                <span className="text-xs font-mono text-slate-500">AUTONOMOUS ENGINES</span>
+                  <span>The Systems Laboratory &bull; 13-Service Fleet</span>
+                </Link>
+                <Link
+                  href="/architecture"
+                  className="text-xs font-mono text-emerald-400 hover:underline flex items-center gap-1"
+                >
+                  <span>Fleet Dossier &rarr;</span>
+                </Link>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 space-y-2">
-                  <div className="text-xs font-mono text-emerald-400">☿ MERCURY DASHA</div>
-                  <div className="text-sm font-semibold text-slate-200">Temporal Systems Engine</div>
-                  <p className="text-xs text-slate-400">Long-horizon ephemeris modeling, multi-decade timelines &amp; Chrono-Pulse SSE ticker.</p>
-                </div>
-
-                <div className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 space-y-2">
-                  <div className="text-xs font-mono text-emerald-400">⚡ AXIS MUNDI</div>
-                  <div className="text-sm font-semibold text-slate-200">Zero-Token Ingestion</div>
-                  <p className="text-xs text-slate-400">High-speed voice ingestion daemon and MCP tool protocol in Go.</p>
-                </div>
-
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <Link
-                  href="/foundations"
-                  className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 space-y-2 hover:border-emerald-500/40 hover:bg-slate-900/40 transition-all group"
+                  href="/architecture"
+                  className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 hover:border-emerald-500/40 hover:bg-slate-900/40 transition-all group space-y-2"
                 >
                   <div className="text-xs font-mono text-emerald-400 flex items-center justify-between">
-                    <span>🏛️ FOUNDATIONS</span>
+                    <span>☿ MERCURY DASHA</span>
                     <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <div className="text-sm font-semibold text-slate-200 group-hover:text-emerald-300 transition-colors">
-                    Lore Matrix &amp; Storyteller
+                    Temporal Engine &bull; Port 8080
                   </div>
-                  <p className="text-xs text-slate-400">Voice-to-structure synthesis, human sovereignty chronicles, and acoustic harmonics.</p>
+                  <p className="text-xs text-slate-400">Ephemeris modeling, photo ingestion pipeline &amp; 85,000-file storehouse indexer.</p>
                 </Link>
 
-                <div className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 space-y-2">
-                  <div className="text-xs font-mono text-emerald-400">⚔️ SOVEREIGN RUNTIME</div>
-                  <div className="text-sm font-semibold text-slate-200">Autonomous Executive</div>
-                  <p className="text-xs text-slate-400">Persistent OODA loop, Life Vault stewardship, and narrative synthesis.</p>
-                </div>
+                <Link
+                  href="/axis-mundi"
+                  className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 hover:border-violet-500/40 hover:bg-slate-900/40 transition-all group space-y-2"
+                >
+                  <div className="text-xs font-mono text-violet-400 flex items-center justify-between">
+                    <span>⚡ AXIS MUNDI</span>
+                    <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <div className="text-sm font-semibold text-slate-200 group-hover:text-violet-300 transition-colors">
+                    Zero-Token Ingestion &bull; Port 8088
+                  </div>
+                  <p className="text-xs text-slate-400">High-speed voice ingestion daemon, MCP tool protocol, and daily telegram digest.</p>
+                </Link>
+
+                <Link
+                  href="/studio"
+                  className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 hover:border-cyan-500/40 hover:bg-slate-900/40 transition-all group space-y-2"
+                >
+                  <div className="text-xs font-mono text-cyan-400 flex items-center justify-between">
+                    <span>🎬 AMRA CREATIVE STUDIO</span>
+                    <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <div className="text-sm font-semibold text-slate-200 group-hover:text-cyan-300 transition-colors">
+                    Video Pipelines &bull; Port 8050
+                  </div>
+                  <p className="text-xs text-slate-400">Headless Modes 1/2/3, pure Go 48kHz WAV audio synthesis &amp; kinetic subtitle burn-in.</p>
+                </Link>
+
+                <Link
+                  href="/architecture"
+                  className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 hover:border-emerald-500/40 hover:bg-slate-900/40 transition-all group space-y-2"
+                >
+                  <div className="text-xs font-mono text-emerald-400 flex items-center justify-between">
+                    <span>👁️ ECHOSH CLASSIFIER</span>
+                    <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <div className="text-sm font-semibold text-slate-200 group-hover:text-emerald-300 transition-colors">
+                    Cognitive VLM &bull; Port 8086
+                  </div>
+                  <p className="text-xs text-slate-400">Zero-cloud Ollama Moondream VLM image intake and intelligent ontology categorization.</p>
+                </Link>
+
+                <Link
+                  href="/architecture"
+                  className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 hover:border-amber-500/40 hover:bg-slate-900/40 transition-all group space-y-2"
+                >
+                  <div className="text-xs font-mono text-amber-400 flex items-center justify-between">
+                    <span>⚔️ SOVEREIGN OBSERVER</span>
+                    <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <div className="text-sm font-semibold text-slate-200 group-hover:text-amber-300 transition-colors">
+                    Executive OODA &bull; Port 8092
+                  </div>
+                  <p className="text-xs text-slate-400">Continuous 5s executive loop, 12-sensor Sensorium &amp; 102,000+ logged SQLite cycles.</p>
+                </Link>
+
+                <Link
+                  href="/martial-arts"
+                  className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 hover:border-red-500/40 hover:bg-slate-900/40 transition-all group space-y-2"
+                >
+                  <div className="text-xs font-mono text-red-400 flex items-center justify-between">
+                    <span>🥋 SHAOLIN ACADEMY</span>
+                    <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <div className="text-sm font-semibold text-slate-200 group-hover:text-red-300 transition-colors">
+                    Martial Relational &bull; Port 8081
+                  </div>
+                  <p className="text-xs text-slate-400">Traditional Martial Arts &amp; Fitness Academy Go REST API, curriculum &amp; student portal.</p>
+                </Link>
               </div>
             </div>
 

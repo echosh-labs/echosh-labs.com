@@ -7,14 +7,13 @@ describe("Core Static Routes Integrity", () => {
 
   const requiredRoutes = [
     { name: "Root Dossier", path: path.join(appDir, "page.tsx") },
-    { name: "Astrological Compendium", path: path.join(appDir, "compendium/page.tsx") },
-    { name: "Foundations Storyboard", path: path.join(appDir, "foundations/page.tsx") },
-    { name: "Axis Mundi Archive", path: path.join(appDir, "axis-mundi/page.tsx") },
+    { name: "Foundations Master Hub", path: path.join(appDir, "foundations/page.tsx") },
+    { name: "Systems Architecture", path: path.join(appDir, "architecture/page.tsx") },
+    { name: "AMRA Sovereign Studio", path: path.join(appDir, "studio/page.tsx") },
+    { name: "Axis Mundi Workspace", path: path.join(appDir, "axis-mundi/page.tsx") },
     { name: "Martial Arts Relational Engine", path: path.join(appDir, "martial-arts/page.tsx") },
     { name: "echoSH Progenitor", path: path.join(appDir, "echosh/page.tsx") },
-    { name: "Legacy Python Archive", path: path.join(appDir, "archive/page.tsx") },
-    { name: "Services & Telemetry", path: path.join(appDir, "services/page.tsx") },
-    { name: "Treasury & Fiscal Telemetry", path: path.join(appDir, "treasury/page.tsx") },
+    { name: "Video Transmissions", path: path.join(appDir, "transmissions/page.tsx") },
   ];
 
   requiredRoutes.forEach((route) => {
@@ -26,7 +25,7 @@ describe("Core Static Routes Integrity", () => {
     });
   });
 
-  it("should have streamlined Header with Mercury logo, echoSH-labs, and audio controls", () => {
+  it("should have streamlined Header with Mercury logo, echoSH-labs, primary nav, and audio controls", () => {
     const headerPath = path.resolve(__dirname, "../components/layout/Header.tsx");
     expect(fs.existsSync(headerPath)).toBe(true);
 
@@ -35,26 +34,31 @@ describe("Core Static Routes Integrity", () => {
     expect(headerContent).toContain('href="/"');
     expect(headerContent).toContain("echoSH-labs");
     expect(headerContent).toContain("☿");
+    // Primary navigation links
+    expect(headerContent).toContain('href="/foundations"');
+    expect(headerContent).toContain('href="/architecture"');
+    expect(headerContent).toContain('href="/studio"');
+    expect(headerContent).toContain('href="/martial-arts"');
+    expect(headerContent).toContain('href="/transmissions"');
     // Audio controls
     expect(headerContent).toContain("toggleAmbient");
     expect(headerContent).toContain("toggleMute");
   });
 
-  it("should have unified Footer linking to all 9 core dossier routes", () => {
+  it("should have unified Footer linking to all core sovereign routes", () => {
     const footerPath = path.resolve(__dirname, "../components/layout/Footer.tsx");
     expect(fs.existsSync(footerPath)).toBe(true);
 
     const footerContent = fs.readFileSync(footerPath, "utf-8");
 
-    // Footer must link to all core routes
+    // Footer must link to core sovereign routes
     expect(footerContent).toContain('"/"');
-    expect(footerContent).toContain('"/compendium"');
     expect(footerContent).toContain('"/foundations"');
+    expect(footerContent).toContain('"/architecture"');
+    expect(footerContent).toContain('"/studio"');
     expect(footerContent).toContain('"/axis-mundi"');
     expect(footerContent).toContain('"/martial-arts"');
+    expect(footerContent).toContain('"/transmissions"');
     expect(footerContent).toContain('"/echosh"');
-    expect(footerContent).toContain('"/archive"');
-    expect(footerContent).toContain('"/services"');
-    expect(footerContent).toContain('"/treasury"');
   });
 });

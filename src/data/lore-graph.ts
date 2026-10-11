@@ -21,7 +21,7 @@ export const LORE_NODES: LoreNode[] = [
   {
     id: "BATTERSEA-1903",
     slug: "the-boy-from-battersea",
-    route: "/chronicles/the-boy-from-battersea",
+    route: "/foundations/the-boy-from-battersea",
     title: "The Boy from Battersea",
     shortTitle: "The Boy from Battersea",
     wikilink: "[[ORIGIN 1903]] The Boy from Battersea",
@@ -39,7 +39,7 @@ export const LORE_NODES: LoreNode[] = [
   {
     id: "HEARTH-1971",
     slug: "the-first-nine-days",
-    route: "/chronicles/the-first-nine-days",
+    route: "/foundations/the-first-nine-days",
     title: "The First Nine Days",
     shortTitle: "The First Nine Days",
     wikilink: "[[HEARTH 1971]] The First Nine Days",
@@ -57,7 +57,7 @@ export const LORE_NODES: LoreNode[] = [
   {
     id: "MSW-1950",
     slug: "mark-steven-wood",
-    route: "/chronicles/mark-steven-wood",
+    route: "/foundations/mark-steven-wood",
     title: "The Principle of Correspondence: The Living Legacy of Mark Steven Wood",
     shortTitle: "Mark Steven Wood",
     wikilink: "[[MSW 1950–2024]] Mark Steven Wood",
@@ -75,7 +75,7 @@ export const LORE_NODES: LoreNode[] = [
   {
     id: "VOXEL-2026",
     slug: "a-family-affair",
-    route: "/chronicles/a-family-affair",
+    route: "/foundations/a-family-affair",
     title: "A Family Affair: The Builders of the Digital Hearth",
     shortTitle: "The Builders at Y=330",
     wikilink: "[[FELLOWSHIP]] A Family Affair",

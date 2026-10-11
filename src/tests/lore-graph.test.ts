@@ -19,7 +19,7 @@ describe("Obsidian Lore Graph Build-Time Integrity", () => {
 
   it("should have existing page.tsx files for every lore node", () => {
     nodes.forEach((node) => {
-      const pagePath = path.join(appDir, "chronicles", node.slug, "page.tsx");
+      const pagePath = path.join(appDir, "foundations", node.slug, "page.tsx");
       expect(
         fs.existsSync(pagePath),
         `Route file missing for lore node ${node.id} at ${pagePath}`
