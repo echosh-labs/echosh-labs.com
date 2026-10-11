@@ -27,26 +27,40 @@ gcloud storage cp -r ./out/* "$BUCKET/"
 
 
 echo "🌐 Uploading clean extensionless HTML objects to $BUCKET..."
-CLEAN_ROUTES=("compendium" "foundations" "axis-mundi" "martial-arts" "echosh" "archive" "services" "treasury" "transmissions" "chronicles/the-boy-from-battersea" "chronicles/the-first-nine-days" "chronicles/a-family-affair" "chronicles/mark-steven-wood")
+CLEAN_ROUTES=(
+  "foundations"
+  "architecture"
+  "studio"
+  "martial-arts"
+  "axis-mundi"
+  "echosh"
+  "transmissions"
+  "compendium"
+  "archive"
+  "services"
+  "treasury"
+  "chronicles"
+  "foundations/the-boy-from-battersea"
+  "foundations/the-first-nine-days"
+  "foundations/a-family-affair"
+  "foundations/mark-steven-wood"
+  "chronicles/the-boy-from-battersea"
+  "chronicles/the-first-nine-days"
+  "chronicles/a-family-affair"
+  "chronicles/mark-steven-wood"
+)
+
 for r in "${CLEAN_ROUTES[@]}"; do
   gcloud storage cp "./out/$r.html" "$BUCKET/$r" --content-type="text/html" --cache-control="no-store, no-cache, must-revalidate" || true
 done
 
 echo "⚡ Applying Cache-Control headers for HTML entry points..."
-gcloud storage objects update $BUCKET/index.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/compendium.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/foundations.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/axis-mundi.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/martial-arts.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/echosh.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/archive.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/services.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/treasury.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/transmissions.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/chronicles/the-boy-from-battersea.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/chronicles/the-first-nine-days.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/chronicles/a-family-affair.html --cache-control="no-store, no-cache, must-revalidate" || true
-gcloud storage objects update $BUCKET/chronicles/mark-steven-wood.html --cache-control="no-store, no-cache, must-revalidate" || true
+gcloud storage objects update "$BUCKET/index.html" --cache-control="no-store, no-cache, must-revalidate" || true
+gcloud storage objects update "$BUCKET/404.html" --cache-control="no-store, no-cache, must-revalidate" || true
+
+for r in "${CLEAN_ROUTES[@]}"; do
+  gcloud storage objects update "$BUCKET/$r.html" --cache-control="no-store, no-cache, must-revalidate" || true
+done
 
 echo "=========================================================="
 echo " ✅ Production Deployment complete!"
