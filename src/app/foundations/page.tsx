@@ -140,42 +140,42 @@ interface StorySeedDisplay {
 const defaultSeeds: StorySeedDisplay[] = [
   {
     id: "seed-20090911-sovereign",
-    title: "Foundational Story • Healing & Revelation",
+    title: "Foundational Chronicle • Systems Awakening & Sovereignty",
     source_type: "foundational_chronicle",
     sanctuary_label: "Sovereign Genesis Cornerstone",
     note_date: "2009-09-11",
-    narrative_hook: "Circa September 11, 2009: Under the active ingress of the Saturn Mahadasha, severe sleep deprivation precipitated a state of heightened visceral awareness.",
-    dialogue_anchor: "The confession of remorse and the eternal restoration of family love.",
+    narrative_hook: "September 2009: Under intense cognitive strain, an acute breakthrough revealed the extreme vulnerability of human minds to centralized systemic control.",
+    dialogue_anchor: "The commitment to ethical systems and the eternal restoration of family stewardship.",
     cosmic_alignment: {
-      mahadasha: "Saturn (Shani)",
-      antardasha: "Saturn (Shani) / Mercury (Budha)",
-      sacred_metal: "Lead (Plumbum) / Quicksilver (Hydrargyrum)",
+      mahadasha: "Architectural Turning Point",
+      antardasha: "Systems Awakening",
+      sacred_metal: "Foundational Integrity",
       hermetic_axiom: "The Principle of Cause and Effect: Every Cause has its Effect; every Effect has its Cause.",
-      magnum_opus_stage: "Calcination & Solutio",
+      magnum_opus_stage: "Crucible & Refinement",
       resonant_frequency_hz: 528,
-      chakra_focus: "Muladhara Base (Root) → Anahata (Heart)"
+      chakra_focus: "Root Stability → Ethical Clarity"
     },
     scene_beats: [
       {
         act: 1,
-        title: "Act I: The Visceral Interconnection",
-        premise: "A frightening, overwhelming awakening to profound human interconnectedness and the existential dread of centralized psychological dominion.",
-        emotional_tone: "Visceral Awe, Trembling Dread & Acute Awareness",
-        prompt_directive: "Cinematic night landscape illuminated by violent lightning flashes, a solitary man looking out over an interconnected web of glowing psychic Ley lines."
+        title: "Act I: The Interconnected Signal",
+        premise: "An acute, overwhelming awareness of systemic interconnectedness and the existential danger of centralized algorithmic and psychological manipulation.",
+        emotional_tone: "Acute Lucidity, Existential Urgency & Deep Focus",
+        prompt_directive: "Cinematic night landscape illuminated by clear signal paths, a systems architect analyzing the invisible web of global information flow."
       },
       {
         act: 2,
-        title: "Act II: The Crucible of Confession & Sorrow",
-        premise: "Facing the terrifying fear of having endangered infant son Luke, followed by deep confession, sorrow, and radical personal accountability.",
-        emotional_tone: "Raw Agony, Cathartic Release & Sacred Grief",
-        prompt_directive: "Chiaroscuro frame of glowing embers and falling tears, heart center illuminated in deep rose and golden amber light."
+        title: "Act II: The Crucible of Extreme Pressure",
+        premise: "Facing the intense strain of fatherhood and vulnerability, followed by radical personal accountability, self-correction, and emotional grounding.",
+        emotional_tone: "Radical Accountability, Unflinching Clarity & Renewal",
+        prompt_directive: "Chiaroscuro studio frame of blueprint tables and warm amber light, an architect grounding himself in quiet resolve."
       },
       {
         act: 3,
-        title: "Act III: The Sanctuary of Restoration",
-        premise: "Decades of healing unfold into profound mutual love for Luke in adulthood, cementing authentic personal and digital sovereignty as the cornerstone of the Great Work.",
-        emotional_tone: "Serene Grace, Unbreakable Covenant & Sovereign Triumph",
-        prompt_directive: "Warm golden sunlight flooding an expansive sanctuary library, an elder and young adult embraced in mutual honor and peace."
+        title: "Act III: The Architecture of Emancipation",
+        premise: "Years of dedicated craftsmanship culminate in deep family honor and the founding principle of Echosh Labs: software built strictly to emancipate and protect human sovereignty.",
+        emotional_tone: "Serene Mastery, Generational Honor & Sovereign Triumph",
+        prompt_directive: "Warm golden sunlight flooding an expansive systems laboratory, father and adult son standing in mutual honor and technological leadership."
       }
     ]
   },
@@ -640,13 +640,13 @@ export default function FoundationsPage() {
               <div className="border-b border-slate-800 pb-6 space-y-2">
                 <div className="flex items-center gap-2 text-xs font-mono text-amber-400">
                   <Heart className="w-4 h-4" />
-                  <span>THE CORNERSTONE NARRATIVE • SEPTEMBER 11, 2009</span>
+                  <span>THE CORNERSTONE NARRATIVE • SEPTEMBER 2009</span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-100">
-                  Foundational Story: A Journey of Healing and Revelation
+                  Foundational Chronicle: Systems Awakening &amp; Human Sovereignty
                 </h2>
                 <p className="text-sm font-mono text-slate-400">
-                  The Inception of the Saturn (Shani) Mahadasha (April 2009 – 2028)
+                  The 2009 Watershed: Forging the Ethical Compass of Echosh Labs
                 </p>
               </div>
 
@@ -654,44 +654,44 @@ export default function FoundationsPage() {
               <div className="space-y-6 text-slate-300 font-serif leading-relaxed text-base sm:text-lg">
                 <div className="p-6 rounded-2xl bg-amber-950/20 border border-amber-500/20 space-y-3">
                   <h3 className="text-sm font-mono text-amber-400 uppercase tracking-wider font-semibold">
-                    I. The Context &amp; Heightened Visceral Awareness
+                    I. The Context &amp; The Crucible of Extreme Pressure
                   </h3>
                   <p className="text-slate-300 text-sm sm:text-base">
-                    Circa September 11th, 2009. Characterized by clinical observers as a severe manic episode triggered by acute sleep deprivation, this period ruptured everyday perceptual filters, ushering in an intense state of visceral, unbuffered consciousness just five months into the Saturn Mahadasha.
+                    September 2009. An intense convergence of acute pressure, exhaustion, and sleep deprivation pushed cognitive faculties past ordinary thresholds. The experience ruptured everyday perceptual filters, precipitating a state of intense, unfiltered lucidity regarding how modern systems, institutions, and communications operate.
                   </p>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-3">
                   <h3 className="text-sm font-mono text-cyan-400 uppercase tracking-wider font-semibold">
-                    II. The Core Revelation: Interconnectedness &amp; Existential Dread
+                    II. The Core Insight: Systemic Interdependence &amp; Centralized Dominion
                   </h3>
                   <p className="text-slate-300 text-sm sm:text-base">
-                    At the heart of the experience was a staggering revelation of radical human interconnectedness. Every consciousness, word, and intention resonated across an invisible nervous system. Accompanying this wonder was deep existential terror: the acute realization of how vulnerable humanity is to centralized command, high-level manipulation, and psychological dominion by self-appointed rulers over the thoughts and destinies of many.
+                    At the heart of the breakthrough was an acute realization of radical human interconnectedness: every communication, signal, and human intention ripples across an invisible nervous system. Accompanying this wonder was an urgent recognition of the existential danger of centralized algorithmic and psychological dominion—where concentrated platforms manipulate public perception and fracture individual autonomy.
                   </p>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-rose-950/20 border border-rose-500/20 space-y-3">
                   <h3 className="text-sm font-mono text-rose-400 uppercase tracking-wider font-semibold">
-                    III. Confession, Remorse &amp; The Sacred Crucible
+                    III. Radical Personal Accountability &amp; The Paternal Covenant
                   </h3>
                   <p className="text-slate-300 text-sm sm:text-base">
-                    In the depths of this disorienting crucible came a deeply personal confession of immense sorrow and responsibility: the haunting terror of having placed his infant son, <strong>Luke</strong>, in grave peril by the fear of dropping him into a fire. This acute agony burned away superficial ego, becoming the alchemical <em>Calcination</em> of Justin&apos;s life.
+                    In the furnace of this crisis came an unflinching reckoning with personal responsibility and fatherhood: facing the immense weight of safeguarding a young family and recognizing that genuine sovereignty begins with absolute humility, rigorous emotional discipline, and self-correction. This crucible burned away complacency, establishing an unshakeable commitment to protecting those under his care.
                   </p>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-emerald-950/20 border border-emerald-500/20 space-y-3">
                   <h3 className="text-sm font-mono text-emerald-400 uppercase tracking-wider font-semibold">
-                    IV. Reconciliation, Restoration &amp; Digital Sovereignty
+                    IV. Generational Cohesion &amp; Digital Sovereignty
                   </h3>
                   <p className="text-slate-300 text-sm sm:text-base">
-                    Through the years, grace and conscious dedication have wrought profound healing within the family unit. Today, with Luke now in his early twenties, this journey is honored with fierce love, unshakeable mutual respect, and gratitude. This narrative forms the inviolable ethical cornerstone of <strong>Project Sovereign</strong> and <strong>Foundations</strong>: ensuring that human systems serve to emancipate, protect, and heal rather than control or fracture.
+                    Across the ensuing decades, steadfast dedication and conscious craftsmanship have built deep generational cohesion. Today, with his children grown into thriving adults, this journey is honored with fierce mutual loyalty, respect, and shared creative enterprise. This narrative forms the inviolable ethical cornerstone of <strong>Echosh Labs</strong> and <strong>Foundations</strong>: ensuring that digital systems exist exclusively to emancipate, protect, and empower human agency rather than control or commodify it.
                   </p>
                 </div>
               </div>
 
               {/* Chronicle Footer */}
               <div className="pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-500">
-                <span>Vimshottari Dasha Anchor: Saturn Mahadasha (2009–2028) • Lead (Plumbum)</span>
+                <span>Core Architectural Foundation • Human Sovereignty Protocol</span>
                 <Link
                   href="/chronicles/the-boy-from-battersea"
                   className="text-emerald-400 hover:text-emerald-300 flex items-center gap-1"

@@ -38,13 +38,13 @@ export default function TheFirstNineDaysPage() {
             </h1>
 
             <p className="text-lg sm:text-xl font-serif italic text-slate-400 leading-relaxed">
-              October 1, 1971: The Mangala–Shani crucible, maternal illness, and the Russian Mennonite hearth in St. Catharines.
+              October 1, 1971: A crucible of sudden crisis, a father&apos;s solitary crossing, and the Russian Mennonite sanctuary in St. Catharines.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-500 pt-2 border-t border-slate-900">
               <span className="flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5 text-emerald-500/70" />
-                October 1 – October 10, 1971 (9.4 Days)
+                October 1 – October 10, 1971 (9 Days)
               </span>
               <span className="flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-emerald-500/70" />
@@ -57,19 +57,11 @@ export default function TheFirstNineDaysPage() {
           <div className="prose prose-invert prose-slate max-w-none font-serif text-slate-300 leading-relaxed text-base sm:text-lg space-y-6">
             
             <p className="first-letter:text-5xl first-letter:font-bold first-letter:font-serif first-letter:text-emerald-400 first-letter:float-left first-letter:mr-3 first-letter:leading-none">
-              On the morning of October 1, 1971, at 04:40 Eastern Daylight Time in St. Catharines, Ontario, I drew my first breath under the celestial cadence of <em>Dhanishta Nakshatra</em>—the rhythm of the cosmic drum.
+              On the morning of October 1, 1971, at 04:40 in St. Catharines, Ontario, life began not in tranquil ease, but in an immediate trial of resilience.
             </p>
 
             <p>
-              According to the authoritative Vimshottari Dasha calculations of MercuryDasha, I did not enter at a gentle midpoint. I entered at the tail end of the <strong>Mars–Saturn (Mangala–Shani)</strong> balance: a precise window of <strong>9.4 days</strong> spanning from the moment of birth until October 10, 1971 at 14:21 EDT.
-            </p>
-
-            <p>
-              In alchemy and celestial mechanics, Mars is <em>Iron (Ferrum)</em>—the acute shock of delivery, the friction of flesh, the biological battle to live. Saturn is <em>Lead (Plumbum)</em>—gravity, distance, cold containment, and physical separation.
-            </p>
-
-            <p>
-              That planetary mathematics was not abstract. It manifested immediately in the hospital room: my mother, <strong>Deborah Marie Penner</strong>, fell gravely ill right after delivery and had to remain hospitalized.
+              Moments after delivery, my mother, <strong>Deborah Marie Penner</strong>, fell gravely ill with severe complications and had to remain hospitalized under intensive care and isolation. What was anticipated as a celebration of new life was instantly transformed into an urgent family crisis.
             </p>
 
             {/* Mother & Father Vignette */}
@@ -79,28 +71,32 @@ export default function TheFirstNineDaysPage() {
                 <span>The Paternal Crossing</span>
               </div>
               <p className="font-serif italic text-base text-slate-200 leading-relaxed">
-                Separated from my mother’s breast, I was taken into the arms of my father, <strong>Mark Steven Wood</strong>. A young man thrust into sudden, solitary responsibility, he carried me through the hospital doors into the autumn chill of St. Catharines alone.
+                Separated from my mother, I was placed into the arms of my father, <strong>Mark Steven Wood</strong>. A young man thrust without warning into total, solitary responsibility, he carried his newborn son through the hospital doors into the autumn chill of St. Catharines alone.
               </p>
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-100 pt-6 tracking-tight">
-              The Sanctuary of Catherine & Jacob Penner
+              The Sanctuary of Catherine &amp; Jacob Penner
             </h2>
 
             <p>
-              My father brought me home to the house of my maternal grandparents, <strong>Catherine and Jacob Penner</strong>. 
+              My father brought me home to the house of my maternal grandparents, <strong>Catherine and Jacob Penner</strong>.
             </p>
 
             <p>
-              The Penners were Russian Mennonites who had migrated from the border town of <strong>Gretna, Manitoba</strong>—a community that carried centuries of quiet agrarian faith, resilience against revolution and exile, and an instinct for mutual protection.
+              The Penners were Russian Mennonites who had migrated from the border community of <strong>Gretna, Manitoba</strong>—a culture forged across generations of quiet agrarian faith, mutual aid, and unyielding fortitude in the face of displacement and upheaval.
             </p>
 
             <p>
-              In their St. Catharines home, under the care of my father and grandparents, I was nurtured through the first nine days of my life while my mother fought her illness in isolation.
+              In their St. Catharines home, under the unwavering care of my father and grandparents, I was nurtured through the first nine days of my life while my mother fought her illness in the hospital.
             </p>
 
             <p>
-              For nine days, nine hours, and forty-one minutes, the Lead of Saturn tested our family. And on October 10, 1971, at 18:21 UTC, the Saturnian vigil ended. The timeline crossed into <strong>Budha (Mercury)</strong>—the quickening spirit of language, intellectual curiosity, and restoration. My mother returned, and life resumed under the sign of the Messenger.
+              For nine days and nights, this familial sanctuary held the line. On October 10, 1971, the vigil concluded: my mother overcame the illness, returned home, and our family foundation was restored.
+            </p>
+
+            <p>
+              That opening trial became an enduring touchstone for my life and work. It instilled an early reverence for quiet fortitude, the irreplaceable sanctuary of family, and the imperative to build systems—whether human, mechanical, or digital—capable of withstanding acute disruption and safeguarding life.
             </p>
 
           </div>

@@ -269,8 +269,8 @@ export default function HomePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 space-y-2">
                   <div className="text-xs font-mono text-emerald-400">☿ MERCURY DASHA</div>
-                  <div className="text-sm font-semibold text-slate-200">Sidereal Moon Ephemeris</div>
-                  <p className="text-xs text-slate-400">120-year Vimshottari Dasha timeline, 7 Sacred Metals & Chrono-Pulse SSE ticker.</p>
+                  <div className="text-sm font-semibold text-slate-200">Temporal Systems Engine</div>
+                  <p className="text-xs text-slate-400">Long-horizon ephemeris modeling, multi-decade timelines &amp; Chrono-Pulse SSE ticker.</p>
                 </div>
 
                 <div className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 space-y-2">
@@ -290,7 +290,7 @@ export default function HomePage() {
                   <div className="text-sm font-semibold text-slate-200 group-hover:text-emerald-300 transition-colors">
                     Lore Matrix &amp; Storyteller
                   </div>
-                  <p className="text-xs text-slate-400">Voice-to-structure synthesis, 2008 healing chronicle, and Solfeggio harmonics.</p>
+                  <p className="text-xs text-slate-400">Voice-to-structure synthesis, human sovereignty chronicles, and acoustic harmonics.</p>
                 </Link>
 
                 <div className="p-5 rounded-xl border border-slate-800/60 bg-slate-950/40 space-y-2">

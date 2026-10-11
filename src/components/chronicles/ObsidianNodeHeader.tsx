@@ -58,10 +58,10 @@ export function ObsidianNodeHeader({ node }: ObsidianNodeHeaderProps) {
           EPOCH: {node.epoch}
         </span>
         <span className="px-2 py-0.5 rounded bg-slate-900/90 border border-slate-800 text-slate-300">
-          ALCHEMICAL: {node.alchemicalElement}
+          SUBSTRATE: {node.alchemicalElement}
         </span>
         <span className="hidden sm:inline-flex px-2 py-0.5 rounded bg-slate-900/90 border border-slate-800 text-slate-400">
-          DASHA: {node.dashaAlignment}
+          TIMELINE: {node.dashaAlignment}
         </span>
       </div>
     </div>

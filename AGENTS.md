@@ -39,7 +39,25 @@ The production domain `https://echosh-labs.com` resolves to Google Cloud Anycast
 
 ---
 
-## 🎙️ 2. Voice-Coding Session Protocols
+## 🛡️ 2. Sovereign Storytelling & Public Privacy Doctrine
+
+### A. The Dual-Sanctum Architecture (Esoteric Engine vs. Exoteric Facade)
+- **Inner Sanctum (Private Engineering):** Internal spiritual and temporal engines (`sovereign-genesis`, `mercury-dasha`, `sovereign.db`) calculate natal coordinates, Vimshottari Dashas, Chaldean planetary horas, and alchemical transmutations for personal grounding and private self-discipline.
+- **Outer Facade (Public Commercial Face):** The public-facing site (`echosh-labs.com`) exists to **generate wealth, establish market authority, and inspire enterprise trust**. Raw occultic, astrological, or clinical vulnerability language must NEVER be published directly onto public-facing routes.
+
+### B. The 5 Invariant Storytelling Laws
+1. **Law of the Dual Sanctum:** The engine computes cosmic rhythm; the public face showcases the commercial and technical harvest. No raw Sanskrit/Vedic astrological terms (e.g., *Mangala-Shani*, *Dhanishta Nakshatra*, *Shani Mahadasha*) on front-facing index cards or public chronicles.
+2. **Wealth & Authority Imperative:** Every chronicle, case study, and biography must reinforce Justin Andrew Wood's four-generation systems lineage, technological capability, craftsmanship, and economic self-sovereignty.
+3. **The Translation Matrix:**
+   - Planetary / Dasha cycles ➔ Long-horizon generational epochs & temporal architecture (1903–2026).
+   - Alchemical metals ➔ Historical telecommunications substrates (1910 Bell copper circuits ➔ 1970s industrial safety ➔ 2026 distributed software architectures).
+   - Personal/domestic crucibles ➔ Stress-testing under extreme pressure, radical personal accountability, and parental protection.
+4. **Obfuscation as Grace & Protection:** Personal crises and domestic vulnerabilities must never be exposed as clinical episodes. Frame pivotal events through the **Universal Heroic Frame**: an acute crisis of pressure that unlocked profound awareness of systemic interdependence, resulting in an ethical mandate to build human-emancipating software.
+5. **Historical Grounding:** Always anchor public narratives in verifiable, high-dignity historical artifacts: Vernon Wood (1903 British Home Child, Bell Telephone lineman), Mark Steven Wood (founder of MSW Training), and modern distributed AI/DSP software.
+
+---
+
+## 🎙️ 3. Voice-Coding Session Protocols
 
 When collaborating with the architect in voice-generated coding sessions:
 1. **Understand Architectural Synonyms:**
@@ -52,7 +70,7 @@ When collaborating with the architect in voice-generated coding sessions:
 
 ---
 
-## 🛠️ 3. Verification & Deployment Commands
+## 🛠️ 4. Verification & Deployment Commands
 
 ```bash
 # Start local dev server
