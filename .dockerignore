@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+.git
+.service-account.json
+.env*.local
+*.log
+*.tsbuildinfo
+bin
+archive
