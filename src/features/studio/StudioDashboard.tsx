@@ -11,7 +11,6 @@ import {
   Cpu, 
   Sparkles, 
   ExternalLink, 
-  Radio, 
   Film, 
   Volume2, 
   Activity, 
@@ -300,28 +299,36 @@ export function StudioDashboard() {
         </div>
       </div>
 
-      {/* Gateway to Published Video Transmissions */}
-      <div className="rounded-3xl border border-red-500/30 bg-gradient-to-br from-red-950/20 via-slate-900/40 to-slate-950/80 p-6 sm:p-8 backdrop-blur-md flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
-        <div className="space-y-2 text-left">
-          <div className="flex items-center gap-2 text-xs font-mono text-red-400">
-            <Radio className="w-4 h-4 animate-pulse" />
-            <span>PUBLISHED CATALOG &bull; LONG-FORM PRODUCTIONS</span>
+      {/* Video Generation Pipeline & Delivery Architecture */}
+      <div className="rounded-3xl border border-cyan-500/30 bg-gradient-to-br from-cyan-950/20 via-slate-900/40 to-slate-950/80 p-6 sm:p-8 backdrop-blur-md flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl">
+        <div className="space-y-2 text-left max-w-2xl">
+          <div className="flex items-center gap-2 text-xs font-mono text-cyan-400">
+            <Cpu className="w-4 h-4 text-cyan-400" />
+            <span>VIDEO PRODUCTION FLEET &bull; PIPELINE SPECIFICATIONS</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-serif font-bold text-slate-100">
-            Explore Sovereign Video Transmissions
+            Automated Video Generation Architecture
           </h3>
-          <p className="text-xs sm:text-sm text-slate-400 font-serif max-w-xl">
-            Watch finished productions compiled by AMRA Studio, including <em>The Art of True Healing</em>, sacred geometry soundbaths, and historical biographical retrospectives on YouTube.
+          <p className="text-xs sm:text-sm text-slate-400 font-serif leading-relaxed">
+            All videos are compiled via headless Go daemons piping raw frames directly to FFmpeg. Video assets are deterministically staged in Google Cloud Storage with byte-level verification, 30 FPS constant framerate, in-memory 48kHz audio beds (-14 LUFS), and kinetic ASS subtitle burn-in.
           </p>
         </div>
 
-        <Link
-          href="/transmissions"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-sans font-bold text-sm transition-all shadow-lg hover:shadow-red-600/25 flex-shrink-0"
-        >
-          <span>View All Transmissions</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
+        <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 w-full md:w-auto">
+          <Link
+            href="/architecture"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-mono text-xs font-semibold transition-all shadow-lg hover:shadow-cyan-600/25 flex-shrink-0"
+          >
+            <span>Fleet Architecture</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+          <Link
+            href="/foundations"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white font-mono text-xs transition-colors flex-shrink-0"
+          >
+            <span>Foundations Chassis</span>
+          </Link>
+        </div>
       </div>
 
     </div>

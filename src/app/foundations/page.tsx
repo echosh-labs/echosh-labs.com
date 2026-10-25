@@ -3,29 +3,28 @@
 import React from "react";
 import Link from "next/link";
 import { 
-  History, 
+  Terminal, 
   Sparkles, 
   ArrowRight, 
-  BookOpen, 
-  Compass, 
-  Network, 
+  Cpu, 
   Layers, 
-  Clock, 
+  Activity, 
+  CheckCircle2, 
   ShieldCheck,
-  Terminal,
-  ExternalLink,
-  ChevronRight
+  Code2,
+  Calendar,
+  Palette,
+  Radio,
+  FileCode2,
+  Zap,
+  Server
 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageContainer } from "@/components/layout/PageContainer";
-import { getAllLoreNodes } from "@/data/lore-graph";
 
 export default function FoundationsPage() {
-  const loreNodes = getAllLoreNodes();
-
   return (
     <div className="min-h-screen bg-[#05070a] text-slate-100 flex flex-col justify-between selection:bg-emerald-500/20 font-sans">
       <Header />
@@ -38,122 +37,182 @@ export default function FoundationsPage() {
             <div className="space-y-6 max-w-4xl">
               <div className="flex flex-wrap items-center gap-3">
                 <Badge variant="emerald" size="sm" className="gap-1.5 font-mono" dot pulseDot>
-                  <Sparkles className="w-3 h-3 text-emerald-400" />
-                  <span>FOUNDATIONS OF THE SOVEREIGN ESTATE</span>
+                  <Cpu className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>FOUNDATIONS ORCHESTRATION CHASSIS // PORT 8085</span>
                 </Badge>
-                <span className="text-xs font-mono text-slate-500">VOYAGE 1890 – 2026</span>
+                <span className="text-xs font-mono text-slate-500">AUTONOMOUS LIVING THROUGH AUTHENTIC FREEDOM</span>
               </div>
 
               <h1 className="text-4xl sm:text-6xl font-serif font-bold text-slate-100 tracking-tight leading-tight">
-                Foundations of Sovereign Lineage.
+                Foundations: The Autonomous Execution Chassis.
               </h1>
 
               <p className="text-slate-300 text-base sm:text-lg font-serif leading-relaxed">
-                The authentic origins, ancestral chronicles, and technological bedrock of <strong className="text-slate-100 font-semibold">Justin Andrew Wood</strong>. 
-                From a British Home Child stringing the first copper circuits for Bell Telephone in 1910 to industrial safety systems and modern distributed autonomous AI fleets, 
-                this is an unbroken, century-long arc of resilience, parental protection, and telecommunications craftsmanship.
+                An industrial-grade, multi-pipeline orchestration engine designed to emancipate human focus from routine screen-time. 
+                Receiving triaged directives from <strong className="text-slate-100 font-semibold">Axis Mundi</strong>&apos;s SQLite event stream, 
+                Foundations operates as the autonomous execution backbone—translating natural spoken voice intents into compiled code, test suites, procedural storyboards, and workspace actions.
               </p>
             </div>
 
-            {/* Generational Lineage Architecture Overview */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/40 backdrop-blur-sm space-y-3">
-                <div className="text-xs font-mono text-emerald-400 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                  <span>1903–1987 • THE COPPER ERA</span>
+            {/* Architecture Overview Diagram Card */}
+            <div className="p-6 sm:p-8 rounded-3xl border border-slate-800 bg-slate-900/40 backdrop-blur-md space-y-6 shadow-2xl">
+              <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-wider">
+                  <Terminal className="w-4 h-4" />
+                  <span>Foundations Event &amp; Triage Lifecycle</span>
                 </div>
-                <h3 className="text-lg font-serif font-bold text-slate-100">Vernon Wood</h3>
-                <p className="text-xs text-slate-400 leading-relaxed font-serif">
-                  British Home Child sailing on the <em>SS Dominion</em>. Earned the Barnardo Silver Medal, strung early copper circuits for Bell Telephone, and laid the family&apos;s telecommunications foundation.
-                </p>
+                <span className="text-xs font-mono text-slate-500">VOICE &rarr; SQLITE &rarr; DISPATCH</span>
               </div>
 
-              <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/40 backdrop-blur-sm space-y-3">
-                <div className="text-xs font-mono text-cyan-400 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-cyan-400" />
-                  <span>1950–2024 • THE INDUSTRIAL SHIELD</span>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs">
+                <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-2">
+                  <div className="text-emerald-400 font-semibold flex items-center gap-1.5">
+                    <Zap className="w-3.5 h-3.5" />
+                    <span>01 // Ingress Ingestion</span>
+                  </div>
+                  <p className="text-slate-400 leading-relaxed">
+                    Voice directives captured via mobile/desktop microphones drop into Google Keep and local audio stores, ingested zero-token by Axis Mundi.
+                  </p>
                 </div>
-                <h3 className="text-lg font-serif font-bold text-slate-100">Mark Steven Wood</h3>
-                <p className="text-xs text-slate-400 leading-relaxed font-serif">
-                  Life dedicated to industrial electrical safety, paternal vigilance, and technical mastery under rigorous pressure. Protected the sovereign hearth across multi-decade corporate shifts.
-                </p>
-              </div>
 
-              <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/40 backdrop-blur-sm space-y-3">
-                <div className="text-xs font-mono text-amber-400 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-amber-400" />
-                  <span>1971–2026 • THE SOVEREIGN STACK</span>
+                <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-2">
+                  <div className="text-cyan-400 font-semibold flex items-center gap-1.5">
+                    <Activity className="w-3.5 h-3.5" />
+                    <span>02 // SQLite Triage</span>
+                  </div>
+                  <p className="text-slate-400 leading-relaxed">
+                    Event classification categorizes incoming intent into CODE_DEV, STRATEGIC_PLAN, or CREATIVE_STORY queues with deterministic priority.
+                  </p>
                 </div>
-                <h3 className="text-lg font-serif font-bold text-slate-100">Justin Andrew Wood</h3>
-                <p className="text-xs text-slate-400 leading-relaxed font-serif">
-                  Transmuting four generations of communications craftsmanship into zero-token daemons, local neural inference, and sovereign autonomous software architectures.
-                </p>
+
+                <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-2">
+                  <div className="text-amber-400 font-semibold flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5" />
+                    <span>03 // Chassis Execution</span>
+                  </div>
+                  <p className="text-slate-400 leading-relaxed">
+                    Go execution engines compile binaries, execute test suites, run browser automation, or stage media pipelines with zero manual clicks.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* The Core Foundational Chapters Grid */}
-            <div className="space-y-8">
+            {/* The 3 Core Execution Pipelines Grid */}
+            <div className="space-y-6">
               <div className="flex items-center justify-between border-b border-slate-800 pb-4">
                 <div className="flex items-center gap-2 text-sm font-mono text-slate-300 uppercase tracking-wider">
-                  <BookOpen className="w-4 h-4 text-emerald-400" />
-                  <span>Foundational Chapters &bull; Lore Graph</span>
+                  <Layers className="w-4 h-4 text-emerald-400" />
+                  <span>The Three Core Foundations Pipelines</span>
                 </div>
-                <span className="text-xs font-mono text-slate-500">4 HISTORICAL NODES REGISTERED</span>
+                <span className="text-xs font-mono text-slate-500">PARALLEL GO DISPATCHERS</span>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {loreNodes.map((node) => (
-                  <Link
-                    key={node.id}
-                    href={node.route}
-                    className="p-6 sm:p-8 rounded-3xl border border-slate-800/80 bg-slate-900/30 hover:border-emerald-500/50 hover:bg-slate-900/60 transition-all duration-300 group flex flex-col justify-between space-y-6 shadow-xl"
-                  >
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-mono text-emerald-400 font-semibold">[[{node.id}]]</span>
-                        <span className="text-xs font-mono text-slate-500 px-2 py-0.5 rounded bg-slate-800/60 border border-slate-700/50">
-                          {node.epoch}
-                        </span>
-                      </div>
-
-                      <h2 className="text-2xl font-serif font-bold text-slate-100 group-hover:text-emerald-300 transition-colors">
-                        {node.title}
-                      </h2>
-
-                      <p className="text-sm text-slate-300 font-serif leading-relaxed">
-                        {node.excerpt}
-                      </p>
-
-                      <div className="flex flex-wrap gap-2 pt-2">
-                        {node.tags.slice(0, 4).map((tag) => (
-                          <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800/80 text-slate-400 border border-slate-700/50">
-                            #{tag}
-                          </span>
-                        ))}
-                      </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                {/* Pipeline 1: CODE_DEV */}
+                <div className="p-6 rounded-3xl border border-emerald-500/30 bg-emerald-950/10 backdrop-blur-sm space-y-4 flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                      <Code2 className="w-5 h-5" />
                     </div>
+                    <div className="text-xs font-mono text-emerald-400 font-bold">PIPELINE: CODE_DEV</div>
+                    <h3 className="text-xl font-serif font-bold text-slate-100">Compiler Chassis</h3>
+                    <p className="text-xs text-slate-400 leading-relaxed font-sans">
+                      Autonomous software engineering pipeline. Runs static analysis, executes test runners, compiles Go and Rust binaries, and pushes git commits with conventional formatting.
+                    </p>
+                  </div>
+                  <div className="pt-4 border-t border-slate-800/80 text-[11px] font-mono text-slate-500 space-y-1">
+                    <div>&bull; Multi-language build runner</div>
+                    <div>&bull; Unit &amp; regression test verification</div>
+                    <div>&bull; Local daemon hot-reloading</div>
+                  </div>
+                </div>
 
-                    <div className="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs font-mono text-emerald-400 group-hover:text-emerald-300">
-                      <span className="flex items-center gap-1.5 font-semibold">
-                        <span>Read Foundational Node</span>
-                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                      </span>
-                      <span className="text-slate-500">{node.readingTime}</span>
+                {/* Pipeline 2: STRATEGIC_PLAN */}
+                <div className="p-6 rounded-3xl border border-cyan-500/30 bg-cyan-950/10 backdrop-blur-sm space-y-4 flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                      <Calendar className="w-5 h-5" />
                     </div>
-                  </Link>
-                ))}
+                    <div className="text-xs font-mono text-cyan-400 font-bold">PIPELINE: STRATEGIC_PLAN</div>
+                    <h3 className="text-xl font-serif font-bold text-slate-100">Workspace Automation</h3>
+                    <p className="text-xs text-slate-400 leading-relaxed font-sans">
+                      Automated operational governance. Schedules calendar agendas, synchronizes Google Docs &amp; Drive assets, audits ledger budgets, and generates daily executive briefs.
+                    </p>
+                  </div>
+                  <div className="pt-4 border-t border-slate-800/80 text-[11px] font-mono text-slate-500 space-y-1">
+                    <div>&bull; Google Workspace API bridge</div>
+                    <div>&bull; AMRA Treasury ledger updates</div>
+                    <div>&bull; Daily schedule and dispatch digest</div>
+                  </div>
+                </div>
+
+                {/* Pipeline 3: CREATIVE_STORY */}
+                <div className="p-6 rounded-3xl border border-amber-500/30 bg-amber-950/10 backdrop-blur-sm space-y-4 flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                      <Palette className="w-5 h-5" />
+                    </div>
+                    <div className="text-xs font-mono text-amber-400 font-bold">PIPELINE: CREATIVE_STORY</div>
+                    <h3 className="text-xl font-serif font-bold text-slate-100">Procedural Storyboards</h3>
+                    <p className="text-xs text-slate-400 leading-relaxed font-sans">
+                      Visual storyboard generation and responsive media synthesis. Translates spoken narrative outlines into visual concept cards, prompt blueprints, and AMRA video manifests.
+                    </p>
+                  </div>
+                  <div className="pt-4 border-t border-slate-800/80 text-[11px] font-mono text-slate-500 space-y-1">
+                    <div>&bull; Procedural asset staging</div>
+                    <div>&bull; AMRA Video Studio manifest bridge</div>
+                    <div>&bull; SVG &amp; responsive UI drafting</div>
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            {/* Provenance & Stewardship Callout */}
-            <div className="rounded-2xl border border-slate-800 bg-slate-950/60 p-6 sm:p-8 text-center space-y-3">
-              <div className="text-xs font-mono text-slate-400 uppercase tracking-widest">
-                IMMUTABLE PERSISTENCE &bull; SOVEREIGN ARCHIVAL VAULT
+            {/* Telemetry Hub & Live IPC Section */}
+            <div className="rounded-3xl border border-slate-800 bg-slate-900/30 p-6 sm:p-10 backdrop-blur-md space-y-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+                <div className="space-y-1">
+                  <div className="text-xs font-mono text-emerald-400 flex items-center gap-2">
+                    <Radio className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
+                    <span>FOUNDATIONS TELEMETRY STREAM &bull; SSE PORT 8085</span>
+                  </div>
+                  <h3 className="text-xl font-serif font-bold text-slate-100">
+                    Real-Time Unix Domain Socket &amp; SSE Hub
+                  </h3>
+                </div>
+                <Link
+                  href="/architecture"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono transition-colors self-start sm:self-auto"
+                >
+                  <span>Fleet Architecture</span>
+                  <ArrowRight className="w-3 h-3 text-emerald-400" />
+                </Link>
               </div>
-              <p className="text-xs sm:text-sm text-slate-400 max-w-2xl mx-auto font-serif leading-relaxed">
-                All foundational documents, photographic scans, Barnardo migration ledgers, and biographical relics 
-                are deterministically cataloged in the sovereign vault at <code className="text-emerald-400">/home/justin/Dropbox/Sovereign/chronicles/assets/</code> and registered within <code className="text-emerald-400">sovereign.db</code>.
+
+              <p className="text-sm text-slate-400 font-serif leading-relaxed max-w-3xl">
+                Foundations broadcasts pipeline lifecycle events over a local Unix domain socket stream and an HTTP Server-Sent Events (SSE) broadcaster on port 8085. 
+                Connected interfaces monitor active compilation progress, test results, and deployment health with sub-millisecond local latency.
               </p>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2 font-mono text-xs">
+                <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800/60">
+                  <div className="text-slate-500 text-[10px]">DAEMON STATUS</div>
+                  <div className="text-emerald-400 font-bold mt-1">ACTIVE</div>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800/60">
+                  <div className="text-slate-500 text-[10px]">IPC INTERFACE</div>
+                  <div className="text-slate-300 font-bold mt-1">UNIX DOMAIN</div>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800/60">
+                  <div className="text-slate-500 text-[10px]">SSE TELEMETRY</div>
+                  <div className="text-slate-300 font-bold mt-1">PORT 8085</div>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800/60">
+                  <div className="text-slate-500 text-[10px]">STORAGE AUDIT</div>
+                  <div className="text-slate-300 font-bold mt-1">SQLITE WAL</div>
+                </div>
+              </div>
             </div>
 
           </div>

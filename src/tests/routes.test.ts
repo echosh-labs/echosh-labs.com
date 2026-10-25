@@ -7,13 +7,12 @@ describe("Core Static Routes Integrity", () => {
 
   const requiredRoutes = [
     { name: "Root Dossier", path: path.join(appDir, "page.tsx") },
-    { name: "Foundations Master Hub", path: path.join(appDir, "foundations/page.tsx") },
+    { name: "Foundations Orchestration Chassis", path: path.join(appDir, "foundations/page.tsx") },
     { name: "Systems Architecture", path: path.join(appDir, "architecture/page.tsx") },
-    { name: "AMRA Sovereign Studio", path: path.join(appDir, "studio/page.tsx") },
-    { name: "Axis Mundi Workspace", path: path.join(appDir, "axis-mundi/page.tsx") },
+    { name: "AMRA Sovereign Video Studio", path: path.join(appDir, "studio/page.tsx") },
+    { name: "Axis Mundi Ingress Bridge", path: path.join(appDir, "axis-mundi/page.tsx") },
     { name: "Martial Arts Relational Engine", path: path.join(appDir, "martial-arts/page.tsx") },
-    { name: "echoSH Progenitor", path: path.join(appDir, "echosh/page.tsx") },
-    { name: "Video Transmissions", path: path.join(appDir, "transmissions/page.tsx") },
+    { name: "echoSH Audio Progenitor", path: path.join(appDir, "echosh/page.tsx") },
   ];
 
   requiredRoutes.forEach((route) => {
@@ -38,8 +37,9 @@ describe("Core Static Routes Integrity", () => {
     expect(headerContent).toContain('href="/foundations"');
     expect(headerContent).toContain('href="/architecture"');
     expect(headerContent).toContain('href="/studio"');
+    expect(headerContent).toContain('href="/axis-mundi"');
     expect(headerContent).toContain('href="/martial-arts"');
-    expect(headerContent).toContain('href="/transmissions"');
+    expect(headerContent).toContain('href="/echosh"');
     // Audio controls
     expect(headerContent).toContain("toggleAmbient");
     expect(headerContent).toContain("toggleMute");
@@ -58,7 +58,6 @@ describe("Core Static Routes Integrity", () => {
     expect(footerContent).toContain('"/studio"');
     expect(footerContent).toContain('"/axis-mundi"');
     expect(footerContent).toContain('"/martial-arts"');
-    expect(footerContent).toContain('"/transmissions"');
     expect(footerContent).toContain('"/echosh"');
   });
 });

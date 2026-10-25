@@ -34,20 +34,10 @@ CLEAN_ROUTES=(
   "martial-arts"
   "axis-mundi"
   "echosh"
-  "transmissions"
   "compendium"
   "archive"
   "services"
   "treasury"
-  "chronicles"
-  "foundations/the-boy-from-battersea"
-  "foundations/the-first-nine-days"
-  "foundations/a-family-affair"
-  "foundations/mark-steven-wood"
-  "chronicles/the-boy-from-battersea"
-  "chronicles/the-first-nine-days"
-  "chronicles/a-family-affair"
-  "chronicles/mark-steven-wood"
 )
 
 for r in "${CLEAN_ROUTES[@]}"; do

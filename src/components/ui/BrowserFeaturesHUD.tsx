@@ -165,7 +165,7 @@ export function BrowserFeaturesHUD() {
           break;
         case "v":
         case "V":
-          router.push("/transmissions");
+          router.push("/studio");
           break;
         case "?":
         case "h":
@@ -302,7 +302,7 @@ export function BrowserFeaturesHUD() {
               </div>
 
               <div className="flex items-center justify-between p-2.5 rounded-xl bg-slate-900/50 border border-slate-800">
-                <span className="text-slate-300">Jump to Video Transmissions</span>
+                <span className="text-slate-300">Jump to AMRA Video Studio</span>
                 <kbd className="px-2 py-1 rounded bg-slate-800 border border-slate-700 text-amber-300">V</kbd>
               </div>
 
